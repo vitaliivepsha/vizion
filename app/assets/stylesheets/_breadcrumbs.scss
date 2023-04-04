@@ -1,0 +1,46 @@
+.breadcrumbs{
+  padding: 10px 0 0;
+  font-size: 10px;
+  line-height: 14px;
+  color: $text;
+  a{
+    color: rgba($text, .5);
+    text-decoration: none;
+    &:hover, &:focus{
+      color: $blue-mid;
+      text-decoration: none;
+      &:before{
+        color: rgba($text, .5);
+      }
+    }
+    &:before{
+      content: '/';
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 4px 0 2px;
+      position: relative;
+      transition: linear .2s;
+
+    }
+    &:first-child{
+      &:before{
+        display: none;
+      }
+    }
+  }
+  span{
+    &:before{
+      content: '/';
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 4px 0 2px;
+      position: relative;
+
+    }
+    &:first-child{
+      &:before{
+        color: rgba($text, 0.5);
+      }
+    }
+  }
+}
