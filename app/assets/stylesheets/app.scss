@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-size: 16px;
-  background-color: #fff;
+  background-color: #F2F2F2;
   font-family: $default;
   font-weight: 400;
   overflow-x: hidden;
@@ -21,7 +21,17 @@ body {
     display: block;
   }
   &.fixed-header {
-
+    .overlay {
+      top: 50px;
+    }
+    .cat-menu {
+      max-height: calc(100vh - 80px);
+    }
+    .main-submenu{
+      >div{
+        top: 83px;
+      }
+    }
   }
   &.open-mobile-menu {
 
@@ -66,7 +76,7 @@ ol, ul {
 
 *, a, .slick-slide{
   outline: none;
-  box-shadow: none !important;
+  box-shadow: none;
   &:focus{
     outline: none;
   }
@@ -100,9 +110,9 @@ main{
 .overlay {
   visibility: hidden;
   opacity: 0;
-  transition: opacity linear 0.2s, visibility linear 0.2s;
+  transition: linear .3s;
   position: fixed;
-  top: 40px;
+  top: 120px;
   left: 0;
   right: 0;
   width: 100%;
@@ -113,6 +123,7 @@ main{
 
 .section{
   clear: both;
+  transition: linear .3s;
 }
 
 .container, .row{
