@@ -93,7 +93,7 @@
     right: 119px;
   }
   .section-subtitle{
-    color: #CDCDCD;
+    color: $text-grey;
     position: absolute;
     top: 30px;
     right: 40px;
@@ -101,7 +101,7 @@
   }
   .section-more{
     justify-content: flex-end;
-    color: #CDCDCD;
+    color: $text-grey;
   }
 }
 
@@ -109,7 +109,7 @@
   position: relative;
   z-index: 1;
   width: 490px;
-  color: #CDCDCD;
+  color: $text-grey;
 }
 
 .assortment-text__top{
