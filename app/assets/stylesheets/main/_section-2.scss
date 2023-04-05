@@ -18,11 +18,24 @@
   text-transform: uppercase;
 }
 
+.section-title{
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 29px;
+  display: list-item;
+  list-style-type: square;
+  margin: 0 0 0 22px;
+  &::marker{
+    color: $red;
+  }
+}
+
 .section-subtitle{
   font-size: 18px;
   line-height: 17px;
   display: list-item;
   list-style-type: square;
+  color: $main;
   &::marker{
     color: $red;
   }
@@ -32,8 +45,21 @@
   display: flex;
   font-size: 12px;
   line-height: 12px;
+  color: $main;
+  span{
+    transition: linear .2s;
+  }
   svg{
+    transition: linear .2s;
     margin-left: 8px;
+  }
+  &:hover{
+    span{
+      opacity: .85;
+    }
+    svg{
+      transform: translateX(3px);
+    }
   }
 }
 
