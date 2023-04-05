@@ -20,22 +20,27 @@ body {
   @include bp(md) {
     display: block;
   }
+
   &.fixed-header {
     .overlay {
       top: 50px;
     }
+
     .cat-menu {
       max-height: calc(100vh - 80px);
     }
-    .main-submenu{
-      >div{
+
+    .main-submenu {
+      > div {
         top: 83px;
       }
     }
   }
+
   &.open-mobile-menu {
 
   }
+
   &.open-menu {
     .overlay {
       visibility: visible;
@@ -74,23 +79,27 @@ ol, ul {
   padding: 0;
 }
 
-*, a, .slick-slide{
+*, a, .slick-slide {
   outline: none;
   box-shadow: none;
-  &:focus{
+
+  &:focus {
     outline: none;
   }
 }
 
 a {
   transition: 0.2s linear;
-  &:hover{
+
+  &:hover {
     text-decoration: none;
   }
-  &:not([class]){
+
+  &:not([class]) {
     color: $main;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       color: $accent;
     }
   }
@@ -102,7 +111,7 @@ svg {
   }
 }
 
-main{
+main {
   position: relative;
   flex: 1 0 auto;
 }
@@ -121,20 +130,22 @@ main{
   background: rgba($main, 0.3);
 }
 
-.section{
+.section {
   clear: both;
   transition: linear .3s;
 }
 
-.container, .row{
-  &:before, &:after{
+.container, .row {
+  &:before, &:after {
     display: none;
   }
 }
 
-.container{
-  max-width: 1170px;
-  @include bp(sm){
+.container {
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
+  @include bp(sm) {
     width: 100%;
   }
 }
@@ -161,24 +172,27 @@ main{
     max-width: 260px;
     background-color: $blue-mid;
     color: #fff;
+
     &:focus,
     &:hover {
-          text-decoration: none;
-          outline: none !important;
-          background-color: $blue;
-          box-shadow: none;
-        }
+      text-decoration: none;
+      outline: none !important;
+      background-color: $blue;
+      box-shadow: none;
+    }
   }
+
   &.btn-tr {
     border: 1px solid $grey;
     background-color: transparent;
     outline: none !important;
     color: #fff;
+
     &:focus,
     &:hover {
       border: 1px solid $blue-mid;
-     background-color: $blue-mid;
-     box-shadow: none;
+      background-color: $blue-mid;
+      box-shadow: none;
     }
   }
 }
@@ -189,31 +203,37 @@ main{
     &::-webkit-input-placeholder {
       color: transparent !important;
     }
+
     &::-moz-placeholder {
       color: transparent !important;
     }
+
     &:-ms-input-placeholder {
       color: transparent !important;
     }
+
     &:-moz-placeholder {
       color: transparent !important;
     }
   }
 }
 
-.input-wrapper{
+.input-wrapper {
   position: relative;
-  &.err{
-    .input, .textarea{
+
+  &.err {
+    .input, .textarea {
       border-color: $red;
       background-color: #fff;
       color: transparent;
-      &::placeholder{
+
+      &::placeholder {
         color: transparent !important;
       }
     }
   }
-  .validate-error{
+
+  .validate-error {
     color: $red;
     font-size: 12px;
     left: 15px;
@@ -224,7 +244,7 @@ main{
     z-index: 2;
     pointer-events: none;
     font-family: $default;
-    @include bp(xs){
+    @include bp(xs) {
       top: 10px;
     }
   }
