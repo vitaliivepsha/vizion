@@ -202,6 +202,12 @@ $(function () {
         });
     });
 
+    // truncate text
+
+    $('.blog-item__descr').succinct({
+        size: 120
+    });
+
     // video gallery
     $(".video-popup").on("click", function (e) {
         $(this).find("img").hide();
