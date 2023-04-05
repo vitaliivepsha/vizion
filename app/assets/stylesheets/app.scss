@@ -133,7 +133,8 @@ main{
 }
 
 .container{
-  max-width: 1200px;
+  width: 1200px;
+  max-width: calc(100% - 60px);
   @include bp(sm){
     width: 100%;
   }
