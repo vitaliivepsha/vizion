@@ -208,6 +208,10 @@ $(function () {
         size: 120
     });
 
+    $('.reviews-item__text').succinct({
+        size: 265
+    });
+
     // video gallery
     $(".video-popup").on("click", function (e) {
         $(this).find("img").hide();
@@ -342,21 +346,6 @@ $(function () {
     $(".acc-head").click(function () {
         $(this).toggleClass("active").next().slideToggle();
         $(".acc-head").not(this).removeClass("active").next().slideUp();
-    });
-
-    // reviews
-
-    $('.reviews-item__text').each(function () {
-        if ($(this).text().length > 300) {
-            $(this).closest('.reviews-item__wrapper').addClass('hide-text');
-        }
-    });
-
-    $(document).delegate('.reviews-item__more', 'click', function () {
-        $(this).hide().closest('.reviews-item__wrapper').find('.reviews-item__text').css({
-            'height': 'auto', 'max-height': 'unset', 'overflow': 'auto',
-            '-webkit-line-clamp': '100'
-        });
     });
 
     // blog (оставить отзыв)
