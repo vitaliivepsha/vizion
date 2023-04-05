@@ -203,6 +203,16 @@ $(function () {
         });
     });
 
+    // truncate text
+
+    $('.blog-item__descr').succinct({
+        size: 120
+    });
+
+    $('.reviews-item__text').succinct({
+        size: 265
+    });
+
     // video gallery
     $(".video-popup").on("click", function (e) {
         $(this).find("img").hide();
@@ -333,21 +343,6 @@ $(function () {
     $(".acc-head").click(function () {
         $(this).toggleClass("active").next().slideToggle();
         $(".acc-head").not(this).removeClass("active").next().slideUp();
-    });
-
-    // reviews
-
-    $('.reviews-item__text').each(function () {
-        if ($(this).text().length > 300) {
-            $(this).closest('.reviews-item__wrapper').addClass('hide-text');
-        }
-    });
-
-    $(document).delegate('.reviews-item__more', 'click', function () {
-        $(this).hide().closest('.reviews-item__wrapper').find('.reviews-item__text').css({
-            'height': 'auto', 'max-height': 'unset', 'overflow': 'auto',
-            '-webkit-line-clamp': '100'
-        });
     });
 
     // blog (оставить отзыв)
@@ -683,8 +678,29 @@ $(function () {
     });
 
 
+    // catalog sort
 
+    $(".dropdown-sort-top").click(function () {
+        $(this).closest(".dropdown-sort").toggleClass("open");
+    });
 
+    $(".dropdown-sort-bot").on("click", ".dropdown-sort-bot-item", function () {
+        var val = $(this).html();
+        $(this)
+            .closest(".dropdown-sort")
+            .removeClass("open")
+            .find(".dropdown-sort-top > .dropdown-sort-top-text")
+            .html(val)
+            .addClass("chosen");
+    });
+
+    $(document).click(function () {
+        $(".dropdown-sort").removeClass("open");
+    });
+
+    $(document).on("click", ".dropdown-sort", function (e) {
+        e.stopPropagation();
+    });
 
     // $('.catalog-filters__show-all').each(function () {
     //     if ($(this).closest('.catalog-filter__body').find('.catalog-filters li').length > 10) {

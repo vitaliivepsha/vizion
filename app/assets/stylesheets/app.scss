@@ -141,10 +141,15 @@ main {
   }
 }
 
+//.container {
+//  @media (min-width: 1200px) {
+//    width: 1200px;
+//  }
+//  @include bp(sm) {
+
 .container {
-  @media (min-width: 1200px) {
-    width: 1200px;
-  }
+  width: 1200px;
+  max-width: calc(100% - 60px);
   @include bp(sm) {
     width: 100%;
   }
@@ -268,8 +273,6 @@ main {
 @import 'main/section-7';
 @import 'main/section-8';
 @import 'main/section-9';
-@import 'main/section-10';
-@import 'main/section-11';
 
 // Footer
 @import 'footer';

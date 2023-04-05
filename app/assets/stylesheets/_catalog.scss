@@ -478,11 +478,89 @@
   line-height: 130%;
   color: $accent;
   transition: all ease-in-out 0.2s;
+
   &:hover,
-  &:focus{
+  &:focus {
     background-color: $accent;
     color: #fff;
   }
+}
+
+.catalog-main__sort-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 10px;
+  height: 26px;
+  min-height: 26px;
+  max-height: 26px;
+  @include bp(xs) {
+    height: 41px;
+    min-height: 41px;
+    max-height: 41px;
+  }
+}
+
+.dropdown-sort {
+  position: relative;
+
+  i {
+    transition: transform ease-in-out 0.3s;
+  }
+
+  &.open {
+    .dropdown-sort-bot {
+      top: calc(100% + 10px);
+      opacity: 1;
+      visibility: visible;
+      transition: visibility ease-in-out 0.2s,
+      visibility ease-in-out 0.2s,
+      opacity ease-in-out 0.2s,
+      top ease-in-out 0.2s;
+    }
+
+    i {
+      transform: scale(1, -1);
+      transition: transform ease-in-out 0.3s;
+    }
+  }
+}
+
+.dropdown-sort-top {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-sort-top-title {
+  margin-right: 7px;
+}
+
+.dropdown-sort-top-text {
+  margin-right: 18px;
+}
+
+.dropdown-sort-bot {
+  position: absolute;
+  top: calc(100% + 20px);
+  right: 0;
+  width: 250px;
+  padding: 15px;
+  background: #FFFFFF;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  visibility: hidden;
+  z-index: 2;
+  opacity: 0;
+  transition: visibility ease-in-out 0.2s,
+  visibility ease-in-out 0.2s,
+  opacity ease-in-out 0.3s,
+  top ease-in-out 0.2s;
+}
+
+.dropdown-sort-bot-item {
+  cursor: pointer;
 }
 
 
@@ -571,137 +649,6 @@
   span {
     margin-left: 3px;
     opacity: .5;
-  }
-}
-
-.catalog-main__sort-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  height: 26px;
-  min-height: 26px;
-  max-height: 26px;
-  @include bp(xs) {
-    height: 41px;
-    min-height: 41px;
-    max-height: 41px;
-    align-items: flex-end;
-  }
-}
-
-.catalog-main__sort {
-  display: flex;
-  align-items: center;
-  @include bp(xs) {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  > span {
-    margin-right: 18px;
-    font-weight: 500;
-    font-size: 10px;
-    line-height: 14px;
-    color: rgba($text, 0.5);
-    @include bp(xs) {
-      margin-bottom: 3px;
-    }
-  }
-
-  .SumoSelect {
-    width: 178px;
-
-    &.open {
-      > .CaptionCont {
-        > label {
-          i {
-            transform: scale(-1, -1);
-          }
-        }
-      }
-
-      > .optWrapper {
-        top: calc(100% + 1px);
-      }
-    }
-
-    > .CaptionCont {
-      border-color: $grey;
-      background-color: $grey;
-      font-weight: 400;
-      font-size: 10px;
-      height: 26px;
-      line-height: 24px;
-      box-shadow: none;
-      border-radius: 5px;
-      padding: 0 0 0 14px;
-      cursor: pointer;
-
-      > span {
-        padding-right: 34px;
-        cursor: pointer;
-      }
-
-      > label {
-        cursor: pointer;
-        width: 34px;
-        margin-bottom: 0;
-
-        i {
-          background: none;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          &:after {
-            display: flex;
-            content: '';
-            -webkit-mask: unset;
-            mask: unset;
-            -webkit-mask-position: center;
-            mask-position: center;
-            -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-            -webkit-mask-size: contain;
-            mask-size: contain;
-            background-color: $text;
-            width: 8px;
-            height: 4px;
-          }
-        }
-      }
-    }
-
-    > .optWrapper {
-      &.isFloating {
-        position: absolute;
-        bottom: auto;
-        top: calc(100% + 1px);
-        width: 100%;
-        max-height: unset;
-
-        > .options {
-          li {
-            &.opt {
-              padding: 5px 14px;
-            }
-          }
-        }
-      }
-
-      > .options {
-        li {
-          padding: 5px 14px;
-
-          label {
-            font-weight: 400;
-            font-size: 10px;
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
   }
 }
 
