@@ -40,7 +40,11 @@ body {
   &.open-mobile-menu {
 
   }
-
+  &.mm-lvl2{
+    .mobile-menu__search{
+      z-index: 1;
+    }
+  }
   &.open-menu {
     .overlay {
       visibility: visible;
@@ -58,6 +62,12 @@ body {
       visibility: visible;
       opacity: 1;
       z-index: 997;
+    }
+    .mobile-menu {
+      &:before{
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 
@@ -126,7 +136,7 @@ main {
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 1001;
+  z-index: 998;
   background: rgba($main, 0.3);
 }
 
@@ -141,17 +151,15 @@ main {
   }
 }
 
-//.container {
-//  @media (min-width: 1200px) {
-//    width: 1200px;
-//  }
-//  @include bp(sm) {
-
 .container {
   width: 1200px;
   max-width: calc(100% - 60px);
+  @include bp(md) {
+    max-width: calc(100% - 30px);
+  }
   @include bp(sm) {
     width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -159,45 +167,46 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  white-space: normal;
   width: 100%;
-  min-height: 45px;
-  padding: 8px;
-  border-radius: 5px;
+  height: 50px;
+  background: $main;
+  color: #fff;
+  border-radius: 30px;
   font-family: $default;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  transition: linear 0.2s;
+  font-size: 16px;
+  line-height: 15px;
+  padding: 0 15px;
+  transition: linear .2s;
   cursor: pointer;
-  @media (max-width: 991px) {
-    min-height: 40px;
+  outline: none !important;
+  box-shadow: none;
+  &:focus,
+  &:hover {
+    outline: none !important;
+    box-shadow: none;
   }
-
-  &.btn-b {
-    max-width: 260px;
-    background-color: $blue-mid;
+  &:hover{
+    background: $red;
     color: #fff;
-
-    &:focus,
+  }
+  &.btn-r {
+    background-color: $red;
+    color: #fff;
     &:hover {
-      text-decoration: none;
-      outline: none !important;
-      background-color: $blue;
-      box-shadow: none;
+      background-color: $main;
+      color: #fff;
     }
   }
-
   &.btn-tr {
-    border: 1px solid $grey;
+    border: 1px solid $main;
     background-color: transparent;
-    outline: none !important;
-    color: #fff;
-
-    &:focus,
+    color: $main;
     &:hover {
-      border: 1px solid $blue-mid;
-      background-color: $blue-mid;
-      box-shadow: none;
+      background-color: $main;
+      color: #fff;
     }
   }
 }
@@ -253,6 +262,74 @@ main {
       top: 10px;
     }
   }
+}
+
+.input{
+  background-color: #fff;
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  outline: none !important;
+  box-shadow: none !important;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 0 15px;
+  color: $main;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.textarea{
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  outline: none !important;
+  box-shadow: none !important;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 15px;
+  color: $main;
+  resize: none;
+  height: 90px;
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    overflow-y: scroll;
+    background: transparent;
+    width: 3px;
+    transition: linear .2s;
+    box-shadow: 1px 0 0 transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $main;
+    border-radius: 0;
+    width: 1px;
+    transition: linear .2s;
+    cursor: grab;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+select:-webkit-autofill,
+select:-webkit-autofill:focus,
+select:-webkit-autofill:hover,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover {
+  -webkit-text-fill-color: $main;
+  -webkit-box-shadow: inset 0 0 0 1000px transparent;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: $main;
 }
 
 ::selection {
