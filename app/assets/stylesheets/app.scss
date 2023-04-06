@@ -141,12 +141,6 @@ main {
   }
 }
 
-//.container {
-//  @media (min-width: 1200px) {
-//    width: 1200px;
-//  }
-//  @include bp(sm) {
-
 .container {
   width: 1200px;
   max-width: calc(100% - 60px);
@@ -159,14 +153,18 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  white-space: normal;
   width: 100%;
-  min-height: 45px;
-  padding: 8px;
-  border-radius: 5px;
+  height: 50px;
+  background: $main;
+  color: #fff;
+  border-radius: 30px;
   font-family: $default;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
+  font-size: 16px;
+  line-height: 15px;
+  padding: 0 15px;
   transition: linear 0.2s;
   cursor: pointer;
   outline: none !important;
@@ -176,31 +174,25 @@ main {
     outline: none !important;
     box-shadow: none;
   }
-  &.btn-b {
-    max-width: 260px;
-    background-color: $blue-mid;
+  &:hover{
+    background: $red;
     color: #fff;
-
-    &:focus,
+  }
+  &.btn-r {
+    background-color: $red;
+    color: #fff;
     &:hover {
-      text-decoration: none;
-      outline: none !important;
-      background-color: $blue;
-      box-shadow: none;
+      background-color: $main;
+      color: #fff;
     }
   }
-
   &.btn-tr {
-    border: 1px solid $grey;
+    border: 1px solid $main;
     background-color: transparent;
-    outline: none !important;
-    color: #fff;
-
-    &:focus,
+    color: $main;
     &:hover {
-      border: 1px solid $blue-mid;
-      background-color: $blue-mid;
-      box-shadow: none;
+      background-color: $main;
+      color: #fff;
     }
   }
 }
