@@ -114,6 +114,9 @@
   @include bp(lg) {
     width: 58%;
   }
+  @include bp(md) {
+    width: 100%;
+  }
 }
 
 .assortment-text__top{
@@ -154,6 +157,9 @@
   @include bp(lg) {
     width: 380px;
     height: fit-content;
+  }
+  @include bp(md) {
+    display: none;
   }
   img{
     width: 100%;

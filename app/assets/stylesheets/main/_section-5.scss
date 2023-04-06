@@ -63,6 +63,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    @include bp(md) {
+      width: 33.33333%;
+    }
     i{
       display: flex;
       align-items: center;
