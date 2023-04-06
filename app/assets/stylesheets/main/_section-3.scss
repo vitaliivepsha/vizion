@@ -22,9 +22,13 @@
   display: block;
   border-radius: 10px;
   overflow: hidden;
+  transition: linear .2s;
   &:hover{
-    .equipment-item__title{
-      color: $red;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    .equipment-item__pic{
+      img{
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -32,10 +36,12 @@
 .equipment-item__pic{
   width: 100%;
   height: 200px;
+  overflow: hidden;
   img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: linear .2s;
   }
 }
 
