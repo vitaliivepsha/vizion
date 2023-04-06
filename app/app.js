@@ -303,6 +303,12 @@ $(function () {
         $(this).closest('.checkout-goods__item').remove();
     });
 
+    $('.cart-popup__item-close').click(function () {
+        $(this).closest('.cart-popup__item').remove();
+    });
+
+
+
     // chechout comment
     $('.chechout-comment').hide();
     $('.chechout-comment__btn').click(function () {
@@ -617,29 +623,30 @@ $(function () {
         $(this).toggleClass('show').closest('.has-children').toggleClass('active').find('ul').slideToggle();
     });
 
+    // catalog range
 
     var $range = $(".js-range-slider"),
         $inputFrom = $(".js-input-from"),
         $inputTo = $(".js-input-to"),
         instance,
-        min = 23000,
-        max = 190000,
-        from = 2300,
-        to = 190000;
+        min = 5489,
+        max = 4535767,
+        from = 5489,
+        to = 4535767;
 
     $range.ionRangeSlider({
         skin: "round",
         type: "double",
         min: min,
         max: max,
-        from: 2300,
-        to: 190000,
+        from: 5489,
+        to: 4535767,
         onStart: updateInputs,
         onChange: updateInputs
     });
     instance = $range.data("ionRangeSlider");
 
-    function updateInputs (data) {
+    function updateInputs(data) {
         from = data.from;
         to = data.to;
 
@@ -678,7 +685,7 @@ $(function () {
     });
 
 
-    // catalog sort
+    // catalog sort dropdown
 
     $(".dropdown-sort-top").click(function () {
         $(this).closest(".dropdown-sort").toggleClass("open");
