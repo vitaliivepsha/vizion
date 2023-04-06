@@ -36,6 +36,9 @@
 
 .main-menu__wrapper{
   width: 270px;
+  @include bp(md) {
+    display: none;
+  }
 }
 
 .main-menu{
@@ -210,6 +213,9 @@
 
 .main-slider__wrapper{
   width: calc(100% - 300px);
+  @include bp(md) {
+    width: 100%;
+  }
   .slider-counter{
     float: right;
     margin-top: 20px;

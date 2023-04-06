@@ -35,6 +35,9 @@
       @include bp(lg) {
         left: -38px;
       }
+      @include bp(md) {
+        left: -15px;
+      }
       &:before{
         margin-left: -1px;
       }
@@ -43,6 +46,9 @@
       right: -60px;
       @include bp(lg) {
         right: -38px;
+      }
+      @include bp(md) {
+        right: -15px;
       }
       &:before{
         transform: scale(-1, -1);

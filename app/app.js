@@ -162,11 +162,15 @@ $(function () {
 
 
     // mobile btn
-    $(".mobile-btn").on("click", function () {
-        $(this).toggleClass("active");
+    $('.mobile-btn').on('click', function () {
+        $(this).toggleClass('active');
         $('.mobile-menu').toggleClass('active');
         $('body').toggleClass('open-mobile-menu');
 
+    });
+    $('.mobile-btn.active').on('click', function () {
+        $('body').removeClass('open-search-results');
+        $('.header-search__wrapper').removeClass('focus');
     });
 
     // main menu
@@ -355,22 +359,25 @@ $(function () {
 
     // header-search
 
-    if ($('.header-search input[type="search"]').val().length) {
-        $('.header-search button').css('pointer-events', 'auto');
-        $('.header-search .search-clear').css('display', 'flex');
-    } else {
-        $('.header-search button').css('pointer-events', 'none');
-        $('.header-search .search-clear').css('display', 'none');
-    }
+    $('.header-search input[type="search"]').each(function () {
 
-    $('.header-search input[type="search"]').on('keyup', function () {
-        if ($('.header-search input[type="search"]').val().length) {
+        if ($(this).val().length) {
             $('.header-search button').css('pointer-events', 'auto');
             $('.header-search .search-clear').css('display', 'flex');
         } else {
             $('.header-search button').css('pointer-events', 'none');
             $('.header-search .search-clear').css('display', 'none');
         }
+
+        $(this).on('keyup', function () {
+            if ($(this).val().length) {
+                $('.header-search button').css('pointer-events', 'auto');
+                $('.header-search .search-clear').css('display', 'flex');
+            } else {
+                $('.header-search button').css('pointer-events', 'none');
+                $('.header-search .search-clear').css('display', 'none');
+            }
+        });
     });
 
     $('.header-search input[type="search"]').bind('keyup keypress', function (e) {
@@ -401,6 +408,10 @@ $(function () {
             $('.header-search > .search-results').show();
             $('body').addClass('open-search-results');
         }
+        $('.mobile-btn.active').on('click', function () {
+            $('body').removeClass('open-search-results');
+            $('.header-search__wrapper').removeClass('focus');
+        });
     });
 
     $('.header-mob__search-btn').click(function () {
