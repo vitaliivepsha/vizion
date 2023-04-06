@@ -53,6 +53,9 @@
     padding: 30px 22px 20px 30px;
     display: flex;
     flex-direction: column;
+    @include bp(lg) {
+      padding: 20px;
+    }
   }
 }
 

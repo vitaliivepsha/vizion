@@ -127,6 +127,7 @@
   visibility: hidden;
   background-color: #fff;
   width: 900px;
+  max-width: calc(100vw - 360px);
   height: 583px;
   left: 100%;
   top: -20px;
