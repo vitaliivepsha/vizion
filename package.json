@@ -101,6 +101,7 @@
   "author": "Mike Chernobrov <m.chernobrov@rambler-co.ru> (http://rambler-co.ru)",
   "license": "MIT",
   "dependencies": {
+    "ion-rangeslider": "^2.3.1",
     "jquery-asRange": "^0.3.4",
     "jquery.nicescroll": "^3.7.6",
     "mark.js": "^8.11.1",
