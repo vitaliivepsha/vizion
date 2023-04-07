@@ -319,10 +319,9 @@
   }
 }
 
-// cart
-
+// availability-popup (У кошику)
 .cart-popup {
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
   width: 570px;
 
   max-width: calc(100vw - 30px);
@@ -533,11 +532,13 @@
       color: $main;
       cursor: pointer;
       transition: all ease-in-out 0.2s;
+
       &:hover {
         color: #fff;
         background-color: $main;
       }
     }
+
     .cart-popup__order {
       position: static;
       display: flex;
@@ -557,10 +558,184 @@
       line-height: 130%;
       color: #fff;
       transition: all ease-in-out 0.2s;
+
       &:hover {
         color: $main;
         background-color: #fff;
       }
+    }
+  }
+}
+
+// availability-popup (Повідомити про наявність товара)
+.availability-popup {
+  padding: 29px 46px 43px 45px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  width: 570px;
+  max-width: calc(100vw - 30px);
+
+  > .mfp-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    top: -26px;
+    right: -27px;
+    font-size: 0;
+    opacity: 1;
+    cursor: pointer;
+
+    &:hover {
+      & svg path {
+        fill: $red;
+      }
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    & svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+  }
+
+}
+
+.availability-popup__title {
+  margin-bottom: 14px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 29px;
+  color: $main;
+  text-align: center;
+}
+
+.availability-popup__subtitle {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 11px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: $main;
+  text-align: center;
+}
+
+.availability-popup__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 13px;
+  border-radius: 10px;
+  border: 1px solid $text-grey;
+  overflow: hidden;
+  padding: 30px 65px 22px 61px;
+}
+
+.availability-popup__item {
+  display: flex;
+}
+
+.availability-popup__item-pic {
+  flex-shrink: 0;
+  width: 84px;
+  max-height: 100px;
+  margin-right: 7px;
+
+  & picture {
+    width: 100%;
+    height: 100%;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.availability-popup-about {
+  padding-top: 11px;
+
+  & a {
+    display: block;
+    margin-bottom: -3px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: $main;
+  }
+
+  & span {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    color: $grey;
+  }
+}
+
+.availability-form__wrapper {
+  display: flex;
+  gap: 21px;
+  margin-bottom: 23px;
+}
+
+.availability-form__inner {
+  width: 50%;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    color: $grey;
+  }
+
+  & .input {
+    background: #FFFFFF;
+    border: 1px solid $text-grey;
+    border-radius: 3px;
+  }
+}
+
+.availability-form__btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  height: 45px;
+  border-radius: 23px;
+  border: 1px solid $main;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  background-color: #F7F7F7;
+  transition: all ease-in-out 0.2s;
+  svg {
+    margin-top: -2px;
+    margin-right: 7px;
+  }
+  &:hover {
+    color: #fff;
+    background-color: $main;
+    svg path{
+      fill: #fff;
     }
   }
 }
@@ -696,49 +871,50 @@
 }
 
 .swal2-modal {
-  width: 500px !important;
+  width: 430px !important;
   max-width: calc(100vw - 30px) !important;
-  background: $grey !important;
+  background: #fff !important;
   font-family: $default;
-  box-shadow: 0 0 20px rgba(56, 56, 56, 0.2) !important;
-  border-radius: 5px;
-  padding: 70px 30px 74px !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 10px;
+  padding: 64px 45px 87px !important;
 
   .swal2-icon {
     display: none !important;
   }
 
   .swal2-title {
-    font-weight: 600;
-    font-size: 21px;
+    font-weight: 500;
+    font-size: 30px;
     line-height: 29px;
-    color: $text;
-    margin-bottom: 22px;
+    color: $main;
+    margin-bottom: 28px;
     text-align: center;
-    text-transform: uppercase;
   }
 
   .swal2-content {
-    font-size: 14px;
-    line-height: 19px;
-    text-align: center;
-    color: $text;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: $main;
   }
 
   .swal2-buttonswrapper {
-    margin-top: 22px;
+    margin-top: 29px;
   }
 
   .swal2-styled {
     margin: 0 auto;
-    width: 200px;
+    width: 235px;
     height: 45px;
-    background: $blue-mid !important;
+    background: $accent !important;
     border: none !important;
-    border-radius: 5px;
+    border-radius: 23px;
+    transition: all ease-in-out 0.2s;
+    box-shadow: none !important;
 
     &:hover {
-      background: $blue !important;
+      background: $red !important;
     }
   }
 }
