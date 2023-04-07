@@ -1,0 +1,54 @@
+.section-bestsellers {
+  padding: 35px 0;
+}
+
+.products-slider {
+  margin: -80px 0;
+  .slick-slide {
+    margin: 80px 15px;
+  }
+
+  .slick-list {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+.bestsellers-head {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.products-slider-arrows {
+  display: flex;
+  gap: 19px;
+
+  .products-arrow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0;
+    border: none;
+    background: #fff;
+
+    &.slick-disabled {
+      background-color: $text-grey;
+      opacity: 0.5;
+    }
+  }
+
+  .products-arrow-prev {
+    padding-right: 3px;
+  }
+  .products-arrow-next {
+    padding-left: 3px;
+  }
+}

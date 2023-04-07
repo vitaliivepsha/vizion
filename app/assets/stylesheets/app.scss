@@ -364,6 +364,10 @@ textarea:-webkit-autofill:hover {
 @import 'popup';
 
 // Pages
+
+@import 'catalog';
+@import 'search-page';
+
 @import 'contacts';
 @import '404';
 @import 'blog';
@@ -371,7 +375,6 @@ textarea:-webkit-autofill:hover {
 @import 'delivery-payment';
 @import 'warranty';
 @import 'product';
-@import 'catalog';
 @import 'price';
 @import 'about';
 @import 'purchase';

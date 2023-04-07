@@ -4,6 +4,14 @@
 
 if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/index.html');
+    require('./assets/templates/layouts/catalog.html');
+    require('./assets/templates/layouts/catalog-checked-filters.html');
+    require('./assets/templates/layouts/search-results.html');
+    require('./assets/templates/layouts/search-results-empty.html');
+    require('./assets/templates/layouts/thank-you.html');
+    require('./assets/templates/layouts/no-goods.html');
+
+    // old
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/404.html');
     require('./assets/templates/layouts/blog.html');
@@ -17,13 +25,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/purchase.html');
     require('./assets/templates/layouts/faq.html');
     require('./assets/templates/layouts/checkout.html');
-    require('./assets/templates/layouts/catalog.html');
-    require('./assets/templates/layouts/catalog-checked-filters.html');
     require('./assets/templates/layouts/catalog-list.html');
-    require('./assets/templates/layouts/search-results.html');
     require('./assets/templates/layouts/price.html');
-    require('./assets/templates/layouts/no-goods.html');
-    require('./assets/templates/layouts/thank-you.html');
     require('./assets/templates/layouts/photo-gallery.html');
     require('./assets/templates/layouts/photo-gallery-category.html');
     require('./assets/templates/layouts/video-gallery.html');
@@ -306,6 +309,12 @@ $(function () {
     $('.checkout-goods__item-close').click(function () {
         $(this).closest('.checkout-goods__item').remove();
     });
+
+    $('.cart-popup__item-close').click(function () {
+        $(this).closest('.cart-popup__item').remove();
+    });
+
+
 
     // chechout comment
     $('.chechout-comment').hide();
@@ -628,29 +637,30 @@ $(function () {
         $(this).toggleClass('show').closest('.has-children').toggleClass('active').find('ul').slideToggle();
     });
 
+    // catalog range
 
     var $range = $(".js-range-slider"),
         $inputFrom = $(".js-input-from"),
         $inputTo = $(".js-input-to"),
         instance,
-        min = 23000,
-        max = 190000,
-        from = 2300,
-        to = 190000;
+        min = 5489,
+        max = 4535767,
+        from = 5489,
+        to = 4535767;
 
     $range.ionRangeSlider({
         skin: "round",
         type: "double",
         min: min,
         max: max,
-        from: 2300,
-        to: 190000,
+        from: 5489,
+        to: 4535767,
         onStart: updateInputs,
         onChange: updateInputs
     });
     instance = $range.data("ionRangeSlider");
 
-    function updateInputs (data) {
+    function updateInputs(data) {
         from = data.from;
         to = data.to;
 
@@ -689,7 +699,7 @@ $(function () {
     });
 
 
-    // catalog sort
+    // catalog sort dropdown
 
     $(".dropdown-sort-top").click(function () {
         $(this).closest(".dropdown-sort").toggleClass("open");

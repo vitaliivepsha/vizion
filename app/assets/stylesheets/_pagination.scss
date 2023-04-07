@@ -2,92 +2,87 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
-  @media (max-width: 991px) {
-    margin-top: 67px;
-    margin-bottom: 40px;
-  }
 
-  &__list {
+  .pagination__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-        padding: 0 54px;
-@media (max-width: 574px) {
-  padding: 0 20px;
-}
-    & li {
-      & a {
-          transition: all linear 0.2s;
-        }
-    }
+    margin: 0 30px;
+    gap: 2px;
 
-    & li+li {
-      margin-left: 10px;
-    }
-
-    & li.current {
-      & span {
-        border: 1px solid $blue-mid;
-        pointer-events: none;
-        transition: all linear 0.2s;
-      }
-    }
-
-    & li.dots {
+    li {
       flex-shrink: 0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      margin-top: 7px;
-      border: none;
-      & a {
-        height: 100%;
-        flex-shrink: 0;
-        height: 20px;
-        border: none;
-      }
     }
   }
 
-  & span,
-  & a {
+  span {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
     border: 1px solid transparent;
+    background-color: #fff;
+    cursor: default;
+    padding-top: 1px;
+  }
+
+  a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: $main;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    color: $text;
-    transition: border linear 0.2s;
+    font-size: 14px;
+    line-height: 130%;
+    border: 1px solid transparent;
+    transition: all ease-in-out 0.2s;
+    padding-top: 1px;
+
     &:hover {
-      border: 1px solid rgba($text, 0.5);
-      text-decoration: none;
+      color: $red;
+
     }
   }
 
-  & .button {
-    opacity: 0.5;
-    border: 1px solid $text;
-  transition: all linear 0.2s;
-    &>svg path {
-      transition: fill linear 0.2s;
+  .button {
+    background-color: #fff;
+
+    &.prev {
+      padding-right: 3px;
     }
 
-    &:hover {
-      opacity: 1;
-      border: 1px solid $text;
-
-      &>svg path {
-        fill: $text;
-      }
+    &.next {
+      padding-left: 1px;
     }
 
     &.disabled {
-      opacity: 0.5;
       pointer-events: none;
+      background-color: $text-grey;
+      border: 1px solid $text-grey;
+      opacity: 0.5;
+    }
+  }
+
+  .dots {
+    align-self: end;
+
+    & a svg {
+      margin-top: 10px;
     }
   }
 }
