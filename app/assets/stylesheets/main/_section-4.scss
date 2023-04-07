@@ -30,7 +30,6 @@
 .products-slider-arrows {
   display: flex;
   gap: 19px;
-
   .products-arrow {
     display: flex;
     flex-wrap: wrap;
@@ -42,13 +41,13 @@
     font-size: 0;
     border: none;
     background: #fff;
-
+    cursor: pointer;
     &.slick-disabled {
       background-color: $text-grey;
       opacity: 0.5;
+      cursor: not-allowed;
     }
   }
-
   .products-arrow-prev {
     padding-right: 3px;
   }

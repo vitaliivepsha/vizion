@@ -185,6 +185,15 @@ $(function () {
         $('body').removeClass('open-menu');
     });
 
+    // header menu
+    $('.header-menu li.has-children').on('mouseover', function () {
+        $('body').addClass('open-menu');
+    });
+
+    $('.header-menu li.has-children').on('mouseout', function () {
+        $('body').removeClass('open-menu');
+    });
+
     // slider counter
 
     $('.counter-slider').each(function () {

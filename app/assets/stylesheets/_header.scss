@@ -533,6 +533,17 @@
   }
   >li{
     margin-right: 25px;
+    position: relative;
+    height: 50px;
+    &:before{
+      position: absolute;
+      content: '';
+      height: 50px;
+      width: calc(100% + 10px);
+      left: -5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
     @include bp(lg) {
       margin-right: 15px;
     }
@@ -540,6 +551,22 @@
       margin-right: 0;
     }
     &.has-children{
+      &:hover{
+        &:hover{
+          >a{
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: underline;
+            svg{
+              transform: scale(1, -1);
+            }
+          }
+        }
+        >ul{
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
       >a{
         >svg{
           display: block;
@@ -557,6 +584,11 @@
       display: flex;
       align-items: center;
       position: relative;
+      height: 100%;
+      &:hover{
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: underline;
+      }
       &:after{
         position: absolute;
         content: '';
@@ -569,10 +601,36 @@
       >svg{
         display: none;
       }
-      &:hover{
-        color: #fff;
-        opacity: .8;
-        text-decoration: underline;
+    }
+    >ul{
+      position: absolute;
+      width: 168px;
+      min-width: max-content;
+      min-height: 80px;
+      z-index: 1;
+      background-color: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      left: 0;
+      top: calc(100% - 10px);
+      padding: 15px;
+      font-size: 14px;
+      line-height: 13px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: ease-in-out .2s;
+      >li{
+        margin-bottom: 15px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        a{
+          color: $main;
+          &:hover{
+            opacity: .75;
+          }
+        }
       }
     }
   }
