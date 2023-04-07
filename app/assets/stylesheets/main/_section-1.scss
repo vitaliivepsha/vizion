@@ -32,6 +32,9 @@
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
+  @include bp(sm) {
+    padding-top: 25px;
+  }
 }
 
 .main-menu__wrapper{

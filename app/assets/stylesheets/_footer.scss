@@ -1,6 +1,9 @@
 .footer-main{
   padding: 61px 0 25px;
   background-color: $main;
+  @include bp(sm) {
+    padding: 30px 0;
+  }
 }
 
 .footer-main__wrapper{
@@ -19,6 +22,9 @@
   @include bp(lg) {
     width: 330px;
     height: 33px;
+  }
+  @include bp(sm) {
+    margin-bottom: 40px;
   }
   img{
     width: 100%;
@@ -75,6 +81,7 @@
   }
   @include bp(sm) {
     flex-direction: column;
+    margin: 0;
   }
 }
 
@@ -87,6 +94,9 @@
   }
   @include bp(sm) {
     width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $grey;
   }
   li{
     margin-bottom: 15px;
@@ -122,6 +132,9 @@
   }
   @include bp(sm) {
     width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $grey;
   }
   span{
     display: block;
@@ -140,6 +153,9 @@
   line-height: 130%;
   color: $text-grey;
   background-color: $main;
+  @include bp(sm) {
+    padding: 20px 0 27px;
+  }
 }
 
 .footer-bot{

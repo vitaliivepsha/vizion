@@ -908,6 +908,9 @@
   margin: 0 auto;
   background-color: #F2F2F2;
   padding: 0 15px 20px;
+  @include bp(sm) {
+    max-width: 100vw;
+  }
   &.show {
     display: flex !important;
     flex-direction: column;

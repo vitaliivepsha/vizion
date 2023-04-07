@@ -60,6 +60,11 @@
   padding: 15px 38px 15px 20px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
   margin-bottom: 70px;
+  position: relative;
+  @include bp(sm) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   >picture{
     width: 59px;
     min-width: 59px;
@@ -74,6 +79,9 @@
   >div{
     flex-grow: 1;
     padding: 7px 20px 7px 0;
+    @include bp(sm) {
+      padding: 15px 0;
+    }
     *{
       &:last-child{
         margin-bottom: 0;
@@ -85,6 +93,15 @@
       font-size: 21px;
       line-height: 20px;
       margin-bottom: 5px;
+      @include bp(sm) {
+        position: absolute;
+        top: 15px;
+        margin: 0;
+        left: 100px;
+        height: 59px;
+        display: flex;
+        align-items: center;
+      }
     }
     p{
       font-size: 14px;
@@ -95,6 +112,9 @@
     width: 195px;
     min-width: fit-content;
     color: #fff;
+    @include bp(sm) {
+      margin: 0 auto;
+    }
   }
 }
 
