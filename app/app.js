@@ -4,6 +4,14 @@
 
 if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/index.html');
+    require('./assets/templates/layouts/catalog.html');
+    require('./assets/templates/layouts/catalog-checked-filters.html');
+    require('./assets/templates/layouts/search-results.html');
+    require('./assets/templates/layouts/search-results-empty.html');
+    require('./assets/templates/layouts/thank-you.html');
+    require('./assets/templates/layouts/no-goods.html');
+
+    // old
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/404.html');
     require('./assets/templates/layouts/blog.html');
@@ -17,13 +25,8 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/purchase.html');
     require('./assets/templates/layouts/faq.html');
     require('./assets/templates/layouts/checkout.html');
-    require('./assets/templates/layouts/catalog.html');
-    require('./assets/templates/layouts/catalog-checked-filters.html');
     require('./assets/templates/layouts/catalog-list.html');
-    require('./assets/templates/layouts/search-results.html');
     require('./assets/templates/layouts/price.html');
-    require('./assets/templates/layouts/no-goods.html');
-    require('./assets/templates/layouts/thank-you.html');
     require('./assets/templates/layouts/photo-gallery.html');
     require('./assets/templates/layouts/photo-gallery-category.html');
     require('./assets/templates/layouts/video-gallery.html');

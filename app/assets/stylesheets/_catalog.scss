@@ -1,9 +1,22 @@
 .catalog-page {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+
+  & + .section-reviews {
+    padding-top: 0;
+    padding-bottom: 110px;
+  }
+
   @include bp(xs) {
     padding-bottom: 25px;
   }
+
+  &.catalog-page {
+    .catalog-main__container {
+      width: 100%;
+    }
+  }
 }
+
 
 .page-title {
   position: relative;
@@ -25,6 +38,10 @@
     width: 10px;
     height: 10px;
     background-color: $red;
+  }
+
+  span {
+    color: $red;
   }
 }
 
@@ -219,14 +236,17 @@
           margin-bottom: 11px;
           padding-left: 0;
           margin-top: 7px;
+
           &.current {
             position: relative;
+
             & a {
               color: $red;
               font-weight: 500;
             }
+
             &:after {
-                content: "";
+              content: "";
               position: absolute;
               top: -4px;
               bottom: 0;
@@ -243,7 +263,7 @@
           .cat-name {
             line-height: 16px;
             position: relative;
-            
+
             &:before {
               content: "";
               position: absolute;
@@ -717,15 +737,19 @@
   font-size: 12px;
   line-height: 120%;
   color: $main;
+
   &:hover {
     color: $red;
   }
+
   svg {
     margin-left: 4px;
   }
+
   &.clear-all {
     margin-left: 12px;
     color: $red;
+
     svg {
       margin-left: 6px;
     }

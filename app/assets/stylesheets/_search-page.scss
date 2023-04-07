@@ -1,0 +1,88 @@
+.search-result-empty {
+  margin-bottom: 58px;
+
+  .page-title {
+    margin-bottom: 24px;
+  }
+
+  .search-result-page__text {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 20px;
+    color: $main;
+
+    + .search-result-page__text {
+      margin-top: 10px;
+    }
+
+  }
+
+  .btn {
+    margin-top: 27px;
+    margin-bottom: 58px;
+    width: fit-content;
+    min-width: 177px;
+    height: 45px;
+  }
+}
+
+.thank-you {
+  padding-bottom: 242px;
+
+  .page-title {
+    margin-bottom: 24px;
+  }
+
+  .thank-you__order {
+    margin-bottom: 31px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 20px;
+    color: $main;
+
+    & span {
+      margin-left: 12px;
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 20px;
+      color: $red;
+    }
+  }
+
+  .thank-you__text {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 130%;
+    color: $main;
+  }
+
+  .btn {
+    max-width: 267px;
+    height: 45px;
+    margin-top: 42px;
+  }
+}
+
+.no-goods {
+  margin-bottom: 320px;
+  .page-title {
+    margin-bottom: 24px;
+  }
+  .no-goods__text {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 20px;
+    color: $main;
+  }
+  .no-goods-btn {
+    display: flex;
+    gap: 32px;
+    margin-top: 50px;
+  }
+  .btn {
+    height: 45px;
+    max-width: 267px;
+  }
+}
+
+
