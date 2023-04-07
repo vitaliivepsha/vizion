@@ -7,6 +7,21 @@
   padding: 0;
 }
 
+.mfp-iframe-holder .mfp-close {
+  position: absolute;
+  top: -27px;
+  right: -30px;
+  width: 25px !important;
+  height: 25px !important;
+  padding-left: 5px;
+  border-radius: 50% !important;
+  background-color: #fff !important;
+  font-size: 25px;
+  line-height: 24px;
+  opacity: 1;
+  color: $main;
+}
+
 .popup {
   position: relative;
   margin: 0 auto;
