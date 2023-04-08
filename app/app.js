@@ -229,6 +229,18 @@ $(function () {
         size: 265
     });
 
+    // fixed controls
+
+    $(window).on('scroll', function() {
+        var wh = $(window).height();
+        if ($(this).scrollTop() > wh){
+            $('.fixed-controls').addClass('active');
+        }
+        else{
+            $('.fixed-controls').removeClass('active');
+        }
+    });
+
     // video gallery
     $(".video-popup").on("click", function (e) {
         $(this).find("img").hide();
