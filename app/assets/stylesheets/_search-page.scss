@@ -1,3 +1,12 @@
+.search-result-page {
+  .catalog-main__container {
+    width: 100%;
+  }
+  & + .section-reviews {
+    padding-bottom: 110px;
+  }
+}
+
 .search-result-empty {
   margin-bottom: 58px;
 

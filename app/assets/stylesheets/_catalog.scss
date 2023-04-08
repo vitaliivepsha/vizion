@@ -9,12 +9,6 @@
   @include bp(xs) {
     padding-bottom: 25px;
   }
-
-  &.catalog-page {
-    .catalog-main__container {
-      width: 100%;
-    }
-  }
 }
 
 
