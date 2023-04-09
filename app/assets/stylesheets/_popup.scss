@@ -7,21 +7,6 @@
   padding: 0;
 }
 
-.mfp-iframe-holder .mfp-close {
-  position: absolute;
-  top: -27px;
-  right: -30px;
-  width: 25px !important;
-  height: 25px !important;
-  padding-left: 5px;
-  border-radius: 50% !important;
-  background-color: #fff !important;
-  font-size: 25px;
-  line-height: 24px;
-  opacity: 1;
-  color: $main;
-}
-
 .popup {
   position: relative;
   margin: 0 auto;
@@ -908,6 +893,45 @@
     justify-content: space-between;
     .popup-questions__form-inner{
       width: calc(50% - 8px);
+    }
+  }
+}
+
+.mfp-iframe-holder{
+  .mfp-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    top: -36px;
+    right: -37px;
+    font-size: 0;
+    opacity: 1;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      &:before {
+        background-color: $red;
+      }
+    }
+    &:before{
+      content: '';
+      display: block;
+      width: 8px;
+      height: 9px;
+      -webkit-mask: url("../images/icons/popup-close.svg");
+      mask: url("../images/icons/popup-close.svg");
+      -webkit-mask-position: center;
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      background-color: $main;
     }
   }
 }

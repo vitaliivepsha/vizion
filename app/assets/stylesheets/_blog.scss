@@ -106,13 +106,21 @@
   padding-bottom: 20px;
   li{
     margin: 10px 30px 10px 0;
-    &.current{
-      color: $blue;
-      text-decoration: underline;
+    &:first-child{
       list-style-type: square;
       margin-left: 12px;
       &::marker{
         color: $blue;
+      }
+    }
+    &.current{
+      color: $blue;
+      text-decoration: underline;
+      a{
+        color: $blue;
+        &:hover{
+          color: $red;
+        }
       }
     }
     a{
