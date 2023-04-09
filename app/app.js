@@ -17,10 +17,10 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/404.html');
     require('./assets/templates/layouts/blog.html');
     require('./assets/templates/layouts/blog-not-found.html');
+    require('./assets/templates/layouts/blog-article.html');
 
     // old
     require('./assets/templates/layouts/contacts.html');
-    require('./assets/templates/layouts/blog-article.html');
     require('./assets/templates/layouts/reviews.html');
     require('./assets/templates/layouts/delivery-payment.html');
     require('./assets/templates/layouts/warranty.html');

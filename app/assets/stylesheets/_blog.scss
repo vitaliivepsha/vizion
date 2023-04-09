@@ -122,3 +122,159 @@
     }
   }
 }
+
+.blog-article{
+  padding-bottom: 75px;
+  .page-title{
+    margin-bottom: 20px;
+  }
+}
+
+.blog-article__back{
+  display: flex;
+  margin-right: 14px;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 23px;
+  color: $main;
+  &:hover{
+    color: rgba($main, .85);
+    svg{
+      transform: scale(-1, 1) translateX(6px);
+    }
+  }
+  svg{
+    transition: linear .2s;
+    transform: scale(-1, 1) translateX(3px);
+  }
+}
+
+.blog-article__pic{
+  display: flex;
+  width: 100%;
+  height: 390px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.blog-article__category{
+  display: flex;
+  align-items: center;
+  padding: 11px 24px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 130%;
+  width: max-content;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  a{
+    color: $blue;
+    &:hover{
+      color: $red;
+    }
+  }
+}
+
+.blog-article__date{
+  margin-left: 8px;
+  color: $grey;
+}
+
+.blog-article__main{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+  padding: 33px 30px 40px;
+  font-size: 16px;
+  line-height: 130%;
+  margin-bottom: 43px;
+  p{
+    margin-bottom: 14px;
+  }
+  ol{
+    list-style-type: decimal;
+    padding-left: 18px;
+    margin-bottom: 14px;
+    li{
+      &::marker{
+        color: $red;
+      }
+    }
+  }
+  ul{
+    list-style-type: square;
+    margin-left: 12px;
+    margin-bottom: 14px;
+    li{
+      &::marker{
+        color: $red;
+      }
+    }
+  }
+  h2, h3, h4{
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 500;
+    margin-bottom: 14px;
+    margin-top: 40px;
+  }
+}
+
+.blog-article__navigation{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .button{
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    transition: linear .2s;
+    font-size: 14px;
+    line-height: 130%;
+    color: $main;
+    &.prev{
+      i{
+        margin-right: 18px;
+        svg{
+          transform: translateX(-2px);
+        }
+      }
+    }
+    &.next{
+      i{
+        margin-left: 18px;
+        svg{
+          transform: translateX(1px);
+        }
+      }
+    }
+    &:hover{
+      color: rgba($main, .85);
+      i{
+        background-color: $grey-light;
+        svg{
+          path{
+            fill: $red;
+          }
+        }
+      }
+    }
+    i{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: linear .2s;
+    }
+  }
+}
