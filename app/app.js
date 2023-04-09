@@ -11,6 +11,9 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/thank-you.html');
     require('./assets/templates/layouts/no-goods.html');
     require('./assets/templates/layouts/about.html');
+    require('./assets/templates/layouts/product.html');
+    require('./assets/templates/layouts/product-in-cart.html');
+    require('./assets/templates/layouts/product-not-available.html');
 
     // old
     require('./assets/templates/layouts/contacts.html');
@@ -21,7 +24,6 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/reviews.html');
     require('./assets/templates/layouts/delivery-payment.html');
     require('./assets/templates/layouts/warranty.html');
-    require('./assets/templates/layouts/product.html');
     require('./assets/templates/layouts/purchase.html');
     require('./assets/templates/layouts/faq.html');
     require('./assets/templates/layouts/checkout.html');

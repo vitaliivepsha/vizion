@@ -869,12 +869,12 @@
           <div class="bestsellers-head">
               <span class="section-title">Популярні категоріі</span>
               <div class="products-slider-arrows">
-                  <div class="products-arrow products-arrow-prev arrow-prev">
+                  <div class="products-arrow products-arrow-prev" id="bestsellers-prev">
                       <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M8.64063 1.175C8.82813 1.3625 8.92188 1.5845 8.92188 1.841C8.92188 2.097 8.82813 2.31875 8.64063 2.50625L3.14688 8L8.65938 13.5125C8.83438 13.6875 8.92188 13.9062 8.92188 14.1687C8.92188 14.4312 8.82813 14.6563 8.64062 14.8438C8.45312 15.0312 8.23112 15.125 7.97462 15.125C7.71862 15.125 7.49687 15.0312 7.30937 14.8437L1.00937 8.525C0.934374 8.45 0.881124 8.36875 0.849624 8.28125C0.818624 8.19375 0.803124 8.1 0.803124 8C0.803124 7.9 0.818624 7.80625 0.849624 7.71875C0.881124 7.63125 0.934374 7.55 1.00937 7.475L7.32813 1.15625C7.50313 0.981251 7.71863 0.893751 7.97463 0.893751C8.23113 0.893751 8.45313 0.987501 8.64063 1.175Z" fill="#17232E"/>
                       </svg>
                   </div>
-                  <div class="products-arrow products-arrow-next arrow-next">
+                  <div class="products-arrow products-arrow-next" id="bestsellers-next">
                       <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M0.359375 14.825C0.171875 14.6375 0.078125 14.4155 0.078125 14.159C0.078125 13.903 0.171875 13.6813 0.359375 13.4938L5.85313 8L0.340625 2.4875C0.165625 2.3125 0.078125 2.09375 0.078125 1.83125C0.078125 1.56875 0.171875 1.34375 0.359375 1.15625C0.546875 0.96875 0.768875 0.875 1.02538 0.875C1.28138 0.875 1.50313 0.96875 1.69063 1.15625L7.99063 7.475C8.06563 7.55 8.11888 7.63125 8.15038 7.71875C8.18138 7.80625 8.19688 7.9 8.19688 8C8.19688 8.1 8.18138 8.19375 8.15038 8.28125C8.11888 8.36875 8.06563 8.45 7.99063 8.525L1.67187 14.8438C1.49687 15.0188 1.28138 15.1063 1.02538 15.1063C0.768875 15.1063 0.546875 15.0125 0.359375 14.825Z" fill="#17232E"/>
                       </svg>
@@ -882,7 +882,7 @@
               </div>
           </div>
           <div class="products-slider slick-slider"
-               data-slick='{"slidesToShow": 4, "slidesToScroll": 4,"prevArrow": ".arrow-prev", "nextArrow": ".arrow-next", "arrows": true, "dots": false, "infinite": false, "responsive":[{"breakpoint":1199,"settings":{"slidesToShow": 3, "slidesToScroll": 3}}, {"breakpoint":991,"settings":{"slidesToShow": 2, "slidesToScroll": 2}}, {"breakpoint":740,"settings":{"arrows": true, "slidesToShow": 2, "slidesToScroll": 2, "dots": false}}]}'>
+               data-slick='{"slidesToShow": 4, "slidesToScroll": 4,"prevArrow": "#bestsellers-prev", "nextArrow": "#bestsellers-next", "arrows": true, "dots": false, "infinite": false, "responsive":[{"breakpoint":1199,"settings":{"slidesToShow": 3, "slidesToScroll": 3}}, {"breakpoint":991,"settings":{"slidesToShow": 2, "slidesToScroll": 2}}, {"breakpoint":740,"settings":{"arrows": true, "slidesToShow": 2, "slidesToScroll": 2, "dots": false}}]}'>
               <div class="product-card">
                   <a href="javascript:void(0)">
                       <div class="product-card__top">
