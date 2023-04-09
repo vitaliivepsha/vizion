@@ -14,10 +14,10 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/product.html');
     require('./assets/templates/layouts/product-in-cart.html');
     require('./assets/templates/layouts/product-not-available.html');
+    require('./assets/templates/layouts/404.html');
 
     // old
     require('./assets/templates/layouts/contacts.html');
-    require('./assets/templates/layouts/404.html');
     require('./assets/templates/layouts/blog.html');
     require('./assets/templates/layouts/blog-article.html');
     require('./assets/templates/layouts/blog-not-found.html');
