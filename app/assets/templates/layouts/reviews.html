@@ -2,413 +2,276 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>Vizion</title>
-  <link rel="shortcut icon" href="../../images/favicon.png" type="image/jpg">
-  <meta name="theme-color" content="#101B25">
-  <meta name="msapplication-navbutton-color" content="#101B25">
-  <meta name="apple-mobile-web-app-status-bar-style" content="#101B25">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Vizion</title>
+    <link rel="shortcut icon" href="../../images/favicon.png" type="image/jpg">
+    <meta name="theme-color" content="#101B25">
+    <meta name="msapplication-navbutton-color" content="#101B25">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#101B25">
 </head>
 
 <body id="main">
-  ${require('../parts/header.html')}
-  <main class="main">
+${require('../parts/header.html')}
+<main class="main">
     <div class="container">
-      <div class="breadcrumbs">
-        <a href="javascript:void(0)">Главная</a>
-        <span>Отзывы</span>
-      </div>
-    </div>
-    <div class="page-head">
-      <h1 class="page-head__title">Отзывы</h1>
-      <p class="page-head__text">Мы всегда открыты для пожеланий и жалоб, чтобы понимать в каком направлении нам<br>
-        развиваться. И конечно, для нас очень
-        ценно, если Вы остались довольны и поделитесь с<br> нами информацией об этом!
-      </p>
-    </div>
-    <div class="reviews">
-      <div class="container">
-        <span class="reviews-btn btn spoiler-title">Оставить отзыв</span>
-        <div class="reviews__form spoiler-content">
-          <form class="reviews-form  ajax_form clear-styles" data-error-title="Ошибка отправки!"
-            data-success-title="Ваш отзыв успешно добавлен!"
-            data-success-message="Он появится на сайте после модерации.">
-            <div class="reviews-form__inner">
-              <div class="reviews-form__inputs">
-                <div class="input-wrapper">
-                  <input class="input" type="text" name="name" data-title="Имя"
-                    data-validate-required="Обязательное поле" placeholder="Имя">
-                </div>
-                <div class="input-wrapper">
-                  <input class="input" type="text" name="email" data-title="Email"
-                    data-validate-required="Обязательное поле" placeholder="Email">
-                </div>
-                <div class="reviews-form__rate">
-                  <span>Поставить оценку</span>
-                  <fieldset class="rating">
-                    <input type="radio" id="star5" name="grade" value="5"><label class="rating-star"
-                      for="star5"></label>
-                    <input type="radio" id="star4" name="grade" value="4"><label class="rating-star"
-                      for="star4"></label>
-                    <input type="radio" id="star3" name="grade" value="3"><label class="rating-star"
-                      for="star3"></label>
-                    <input type="radio" id="star2" name="grade" value="2"><label class="rating-star"
-                      for="star2"></label>
-                    <input type="radio" id="star1" name="grade" value="1"><label class="rating-star"
-                      for="star1"></label>
-                  </fieldset>
-                </div>
-              </div>
-              <div class="reviews-form__inputs">
-                <div class="input-wrapper">
-                  <textarea class="textarea" name="review" data-title="Сообщение"
-                    data-validate-required="Обязательное поле" placeholder="Напишите Ваш отзыв"></textarea>
-                </div>
-                <button class="btn" type="submit">Отправить</button>
-              </div>
-            </div>
-          </form>
+        <div class="breadcrumbs">
+            <a href="/">Головна</a>
+            <span>Відгуки</span>
         </div>
-      </div>
-      <div class="reviews-content">
-        <div class="container">
-          <div class="reviews-content__items row">
-            <div class="col-md-4 col-sm-6">
-              <div class="reviews-item">
-                <div class="reviews-item__wrapper">
-                  <div class="reviews-item__head">
-                    <span class="reviews-item__name">Криворучков Дмитрий</span>
-                    <div class="reviews-item__rating rating-stars">
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
+        <div class="page-title">Відгуки</div>
+        <div class="page-reviews">
+            <div class="page-reviews__top">
+                <div class="page-reviews__top-wrapper">
+                    <p class="page-head__top-text">Залишайте свої відгуки та побажання. </p>
+                    <span class="btn page-reviews__top-btn">Залишити відгук</span>
+                </div>
+                <div class="page-reviews__top-form">
+                    <div class="page-reviews__top-form-title"><span>Напишіть відгук</span></div>
+                    <form class="review-form ajax_form clear-styles" data-error-title="Помилка відправки!"
+                          data-error-message="Спробуйте пізніше" data-success-title="Дякуємо за відгук"
+                          data-success-message="Відгук буде опублікован після перевірки модератором">
+                        <div class="review-form__wrapper">
+                            <div class="review-form__row">
+                                <div class="review-form__inner">
+                                    <label>Ім’я</label>
+                                    <div class="input-wrapper">
+                                        <input class="input" type="text" name="name" data-title="Name"
+                                               data-validate-required="Заповніть поле Ім’я">
+                                    </div>
+                                </div>
+                                <div class="review-form__inner">
+                                    <label>Email</label>
+                                    <div class="input-wrapper">
+                                        <input class="input" type="text" name="email" data-title="Email"
+                                               data-validate-required="Заповніть поле Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review-form__inner">
+                                <label>Ваш відгук</label>
+                                <div class="input-wrapper">
+                                            <textarea class="textarea" name="message"
+                                                      data-validate-required="Напишіть свій відгук"
+                                                      data-title="Повідомлення"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review-form__rating">
+                            <span>Ваша оцінка</span>
+                            <fieldset class="rating">
+                                <input type="radio" id="star5" name="grade" value="5"><label class="rating-star"
+                                                                                             for="star5"></label>
+                                <input type="radio" id="star4" name="grade" value="4"><label class="rating-star"
+                                                                                             for="star4"></label>
+                                <input type="radio" id="star3" name="grade" value="3"><label class="rating-star"
+                                                                                             for="star3"></label>
+                                <input type="radio" id="star2" name="grade" value="2"><label class="rating-star"
+                                                                                             for="star2"></label>
+                                <input type="radio" id="star1" name="grade" value="1"><label class="rating-star"
+                                                                                             for="star1"></label>
+                            </fieldset>
+                        </div>
+                        <button class="btn btn-b" type="submit">Залишити відгук</button>
+                    </form>
+                </div>
+            </div>
+            <div class="page-reviews__content">
+                <div class="reviews-item">
+                    <div class="reviews-item__rating">
+                        <div class="rating-stars">
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star"></span>
+                        </div>
                     </div>
-                  </div>
+                    <div class="reviews-item__text">
+                        Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
+                    </div>
+                    <div class="reviews-item__bot">
+                        <span class="reviews-item__date">08.06.2022</span>
+                        <span class="reviews-item__name">Аліна</span>
+                    </div>
+                </div>
+                <div class="reviews-item">
+                    <div class="reviews-item__rating">
+                        <div class="rating-stars">
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star"></span>
+                        </div>
+                    </div>
+                    <div class="reviews-item__text">
+                        Curabitur tincidunt erat diam, id aliquet libero convallis nec. Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...                </div>
+                    <div class="reviews-item__bot">
+                        <span class="reviews-item__date">08.06.2022</span>
+                        <span class="reviews-item__name">Кирило</span>
+                    </div>
+                </div>
+                <div class="reviews-item">
+                    <div class="reviews-item__rating">
+                        <div class="rating-stars">
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star"></span>
+                        </div>
+                    </div>
+                    <div class="reviews-item__text">
+                        Nullam elementum lobortis elit. Vivamus eget fringilla tellus.                 </div>
+                    <div class="reviews-item__bot">
+                        <span class="reviews-item__date">08.06.2022</span>
+                        <span class="reviews-item__name">Андрій</span>
+                    </div>
+                </div>
+                <div class="reviews-item">
+                    <div class="reviews-item__rating">
+                        <div class="rating-stars">
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star"></span>
+                        </div>
+                    </div>
+                    <div class="reviews-item__text">
+                        Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
+                    </div>
+                    <div class="reviews-item__bot">
+                        <span class="reviews-item__date">08.06.2022</span>
+                        <span class="reviews-item__name">Аліна</span>
+                    </div>
+                </div>
+                <div class="reviews-item">
+                    <div class="reviews-item__rating">
+                        <div class="rating-stars">
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star"></span>
+                        </div>
+                    </div>
+                    <div class="reviews-item__text">
+                        Curabitur tincidunt erat diam, id aliquet libero convallis nec. Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...                </div>
+                    <div class="reviews-item__bot">
+                        <span class="reviews-item__date">08.06.2022</span>
+                        <span class="reviews-item__name">Кирило</span>
+                    </div>
+                </div>
+                <div class="reviews-item">
+                    <div class="reviews-item__rating">
+                        <div class="rating-stars">
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star"></span>
+                        </div>
+                    </div>
+                    <div class="reviews-item__text">
+                        Nullam elementum lobortis elit. Vivamus eget fringilla tellus.                 </div>
+                    <div class="reviews-item__bot">
+                        <span class="reviews-item__date">08.06.2022</span>
+                        <span class="reviews-item__name">Андрій</span>
+                    </div>
+                </div>
+                <div class="reviews-item">
+                    <div class="reviews-item__rating">
+                        <div class="rating-stars">
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star"></span>
+                        </div>
+                    </div>
+                    <div class="reviews-item__text">
+                        Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
+                    </div>
+                    <div class="reviews-item__bot">
+                        <span class="reviews-item__date">08.06.2022</span>
+                        <span class="reviews-item__name">Аліна</span>
+                    </div>
+                </div>
+                <div class="reviews-item">
+                    <div class="reviews-item__rating">
+                        <div class="rating-stars">
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star active"></span>
+                            <span class="rating-star icon-star"></span>
+                        </div>
+                    </div>
+                    <div class="reviews-item__text">
+                        Curabitur tincidunt erat diam, id aliquet libero convallis nec. Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus hendrerit volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...                </div>
+                    <div class="reviews-item__bot">
+                        <span class="reviews-item__date">08.06.2022</span>
+                        <span class="reviews-item__name">Кирило</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="javascript:void(0)" class="button prev disabled">
+                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.64063 1.175C8.82813 1.3625 8.92188 1.5845 8.92188 1.841C8.92188 2.097 8.82813 2.31875 8.64063 2.50625L3.14687 8L8.65938 13.5125C8.83438 13.6875 8.92188 13.9063 8.92188 14.1688C8.92188 14.4312 8.82813 14.6563 8.64063 14.8437C8.45312 15.0312 8.23112 15.125 7.97462 15.125C7.71862 15.125 7.49687 15.0312 7.30937 14.8437L1.00937 8.525C0.934374 8.45 0.881125 8.36875 0.849625 8.28125C0.818625 8.19375 0.803124 8.1 0.803124 8C0.803124 7.9 0.818625 7.80625 0.849625 7.71875C0.881125 7.63125 0.934374 7.55 1.00937 7.475L7.32813 1.15625C7.50313 0.981251 7.71863 0.893751 7.97463 0.893751C8.23113 0.893751 8.45313 0.987501 8.64063 1.175Z"
+                            fill="#17232E"/>
+                    </svg>
 
-                  <p class="reviews-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                    amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                  </p>
-                  <div class="reviews-item__more">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div><span class="reviews-item__date">31/01/2020</span>
-                <div class="reviews-item__reply">
-                  <span>Providian Medical:</span>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id
-                    aliquet
-                    libero convallis nec.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="reviews-item">
-                <div class="reviews-item__wrapper">
-                  <div class="reviews-item__head">
-                    <span class="reviews-item__name">Елена Виктор</span>
-                    <div class="reviews-item__rating rating-stars">
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                    </div>
-                  </div>
-                  <p class="reviews-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                    libero convallis nec.
-                  </p>
-                  <div class="reviews-item__more">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div><span class="reviews-item__date">31/01/2020</span>
-                <div class="reviews-item__reply">
-                  <span>Providian Medical:</span>
-                  <p>Lorem ipsumc.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="reviews-item">
-                <div class="reviews-item__wrapper">
-                  <div class="reviews-item__head">
-                    <span class="reviews-item__name">Андрей</span>
-                    <div class="reviews-item__rating rating-stars">
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star"></span>
-                    </div>
-                  </div>
-                  <p class="reviews-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                    libero convallis nec.
-                    Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus
-                    hendrerit volutpat. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <div class="reviews-item__more">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div><span class="reviews-item__date">31/01/2020</span>
-                <div class="reviews-item__reply">
-                  <span>Providian Medical:</span>
-                  <p>Curabitur tincidunt erat diam, id aliquet libero convallis nec.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="reviews-item">
-                <div class="reviews-item__wrapper">
-                  <div class="reviews-item__head">
-                    <span class="reviews-item__name">Андрей</span>
-                    <div class="reviews-item__rating rating-stars">
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star"></span>
-                      <span class="rating-star"></span>
-                    </div>
-                  </div>
-                  <p class="reviews-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                    libero convallis nec.
-                    Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus
-                    hendrerit volutpat. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <div class="reviews-item__more">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div><span class="reviews-item__date">31/01/2020</span>
-                <div class="reviews-item__reply">
-                  <span>Providian Medical:</span>
-                  <p>Curabitur tincidunt erat diam, id aliquet libero convallis nec.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="reviews-item">
-                <div class="reviews-item__wrapper">
-                  <div class="reviews-item__head">
-                    <span class="reviews-item__name">Елена Виктор</span>
-                    <div class="reviews-item__rating rating-stars">
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star"></span>
-                      <span class="rating-star"></span>
-                      <span class="rating-star"></span>
-                    </div>
-                  </div>
-                  <p class="reviews-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                    libero convallis nec.
-                  </p>
-                  <div class="reviews-item__more">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div><span class="reviews-item__date">31/01/2020</span>
-                <div class="reviews-item__reply">
-                  <span>Providian Medical:</span>
-                  <p>Lorem ipsumc.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="reviews-item">
-                <div class="reviews-item__wrapper">
-                  <div class="reviews-item__head">
-                    <span class="reviews-item__name">Криворучков Дмитрий</span>
-                    <div class="reviews-item__rating rating-stars">
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                    </div>
-                  </div>
-                  <p class="reviews-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                    libero convallis nec.
-                    Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus
-                    hendrerit
-                    volutpat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Class
-                    aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos...
-                  </p>
-                  <div class="reviews-item__more">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div><span class="reviews-item__date">31/01/2020</span>
-                <div class="reviews-item__reply">
-                  <span>Providian Medical:</span>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id
-                    aliquet
-                    libero convallis nec.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="reviews-item">
-                <div class="reviews-item__wrapper">
-                  <div class="reviews-item__head">
-                    <span class="reviews-item__name">Елена Виктор</span>
-                    <div class="reviews-item__rating rating-stars">
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                    </div>
-                  </div>
-                  <p class="reviews-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                    libero convallis nec.
-                  </p>
-                  <div class="reviews-item__more">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div><span class="reviews-item__date">31/01/2020</span>
-                <div class="reviews-item__reply">
-                  <span>Providian Medical:</span>
-                  <p>Lorem ipsumc.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="reviews-item">
-                <div class="reviews-item__wrapper">
-                  <div class="reviews-item__head">
-                    <span class="reviews-item__name">Андрей</span>
-                    <div class="reviews-item__rating rating-stars">
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star"></span>
-                    </div>
-                  </div>
-                  <p class="reviews-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                    libero convallis nec.
-                    Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus
-                    hendrerit volutpat. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <div class="reviews-item__more">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div><span class="reviews-item__date">31/01/2020</span>
-                <div class="reviews-item__reply">
-                  <span>Providian Medical:</span>
-                  <p>Curabitur tincidunt erat diam, id aliquet libero convallis nec.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div class="reviews-item">
-                <div class="reviews-item__wrapper">
-                  <div class="reviews-item__head">
-                    <span class="reviews-item__name">Андрей</span>
-                    <div class="reviews-item__rating rating-stars">
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star active"></span>
-                      <span class="rating-star"></span>
-                      <span class="rating-star"></span>
-                    </div>
-                  </div>
-                  <p class="reviews-item__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt erat diam, id aliquet
-                    libero convallis nec.
-                    Nullam elementum lobortis elit. Vivamus eget fringilla tellus. Praesent ac felis eu metus
-                    hendrerit volutpat. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
-                  <div class="reviews-item__more">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div><span class="reviews-item__date">31/01/2020</span>
-                <div class="reviews-item__reply">
-                  <span>Providian Medical:</span>
-                  <p>Curabitur tincidunt erat diam, id aliquet libero convallis nec.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="pagination">
-            <a href="javascript:void(0)" class="button prev disabled">
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M8.00089 4.00014C8.00089 4.13275 7.94821 4.25993 7.85445 4.3537C7.76068 4.44747 7.6335 4.50014 7.50089 4.50014L1.70789 4.50014L3.85489 6.64614C3.90138 6.69263 3.93826 6.74782 3.96342 6.80856C3.98858 6.8693 4.00152 6.9344 4.00152 7.00014C4.00152 7.06589 3.98858 7.13099 3.96342 7.19173C3.93826 7.25247 3.90138 7.30766 3.85489 7.35414C3.8084 7.40063 3.75322 7.43751 3.69248 7.46267C3.63174 7.48783 3.56664 7.50078 3.50089 7.50078C3.43515 7.50078 3.37005 7.48783 3.30931 7.46267C3.24857 7.43751 3.19338 7.40063 3.14689 7.35414L0.146893 4.35414C0.10033 4.3077 0.0633869 4.25252 0.0381804 4.19178C0.012974 4.13103 -6.23569e-07 4.06591 -6.1207e-07 4.00014C-6.00571e-07 3.93438 0.012974 3.86926 0.0381805 3.80851C0.0633869 3.74776 0.10033 3.69259 0.146893 3.64614L3.14689 0.646144C3.24078 0.552257 3.36812 0.499512 3.50089 0.499512C3.63367 0.499512 3.76101 0.552257 3.85489 0.646144C3.94878 0.740031 4.00152 0.867368 4.00152 1.00014C4.00152 1.13292 3.94878 1.26026 3.85489 1.35414L1.70789 3.50014L7.50089 3.50014C7.6335 3.50014 7.76068 3.55282 7.85445 3.64659C7.94821 3.74036 8.00089 3.86754 8.00089 4.00014Z"
-                  fill="#252525" />
-              </svg>
-            </a>
-            <ul class="pagination__list">
-              <li class="current">
-                <span>1</span>
-              </li>
-              <li>
-                <a href="javascript:void(0)">2</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">3</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">4</a>
-              </li>
-              <li class="dots">
-                <a href="javascript:void(0)">
-                  <svg width="19" height="3" viewBox="0 0 19 3" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="1.5" cy="1.5" r="1.5" fill="#252525" />
-                    <circle opacity="0.5" cx="9.5" cy="1.5" r="1.5" fill="#252525" />
-                    <circle opacity="0.5" cx="17.5" cy="1.5" r="1.5" fill="#252525" />
-                  </svg>
                 </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">12</a>
-              </li>
-              <li>
-                <a href="javascript:void(0)">13</a>
-              </li>
-            </ul>
-            <a class="button next" href="javascript:void(0)">
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M-0.000893899 3.99986C-0.00089391 3.86725 0.0517841 3.74007 0.145552 3.6463C0.23932 3.55254 0.366498 3.49986 0.499106 3.49986L6.29211 3.49986L4.14511 1.35386C4.09862 1.30737 4.06174 1.25218 4.03658 1.19144C4.01142 1.1307 3.99847 1.0656 3.99847 0.999857C3.99847 0.934113 4.01142 0.869013 4.03658 0.808273C4.06174 0.747534 4.09862 0.692345 4.14511 0.645857C4.19159 0.599369 4.24678 0.562492 4.30752 0.537333C4.36826 0.512174 4.43336 0.499225 4.49911 0.499225C4.56485 0.499225 4.62995 0.512174 4.69069 0.537333C4.75143 0.562492 4.80662 0.599369 4.85311 0.645857L7.85311 3.64586C7.89967 3.6923 7.93661 3.74748 7.96182 3.80822C7.98703 3.86897 8 3.93409 8 3.99986C8 4.06562 7.98703 4.13075 7.96182 4.19149C7.93661 4.25224 7.89967 4.30741 7.85311 4.35386L4.85311 7.35386C4.75922 7.44774 4.63188 7.50049 4.49911 7.50049C4.36633 7.50049 4.23899 7.44774 4.14511 7.35386C4.05122 7.25997 3.99848 7.13263 3.99848 6.99986C3.99848 6.86708 4.05122 6.73974 4.14511 6.64586L6.29211 4.49986L0.499106 4.49986C0.366498 4.49986 0.239321 4.44718 0.145552 4.35341C0.0517842 4.25964 -0.000893887 4.13247 -0.000893899 3.99986Z"
-                  fill="#252525" />
-              </svg>
-            </a>
-          </div>
+                <ul class="pagination__list">
+                    <li class="current">
+                        <span>1</span>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">3</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">4</a>
+                    </li>
+                    <li class="dots">
+                        <a href="javascript:void(0)">
+                            <svg width="10" height="3" viewBox="0 0 10 3" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.0527344 1.27539C0.0527344 1.80859 0.435547 2.13672 0.914062 2.13672C1.39258 2.13672 1.77539 1.80859 1.77539 1.27539C1.77539 0.755859 1.39258 0.414062 0.914062 0.414062C0.435547 0.414062 0.0527344 0.755859 0.0527344 1.27539ZM3.88086 1.27539C3.88086 1.80859 4.26367 2.13672 4.74219 2.13672C5.2207 2.13672 5.60352 1.80859 5.60352 1.27539C5.60352 0.755859 5.2207 0.414062 4.74219 0.414062C4.26367 0.414062 3.88086 0.755859 3.88086 1.27539ZM7.70898 1.27539C7.70898 1.80859 8.0918 2.13672 8.57031 2.13672C9.04883 2.13672 9.43164 1.80859 9.43164 1.27539C9.43164 0.755859 9.04883 0.414062 8.57031 0.414062C8.0918 0.414062 7.70898 0.755859 7.70898 1.27539Z"
+                                    fill="#17232E"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">32</a>
+                    </li>
+                </ul>
+                <a class="button next" href="javascript:void(0)">
+                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.359375 14.825C0.171875 14.6375 0.078125 14.4155 0.078125 14.159C0.078125 13.903 0.171875 13.6813 0.359375 13.4938L5.85313 8L0.340625 2.4875C0.165625 2.3125 0.078125 2.09375 0.078125 1.83125C0.078125 1.56875 0.171875 1.34375 0.359375 1.15625C0.546875 0.96875 0.768875 0.875 1.02538 0.875C1.28138 0.875 1.50313 0.96875 1.69063 1.15625L7.99063 7.475C8.06563 7.55 8.11888 7.63125 8.15038 7.71875C8.18138 7.80625 8.19688 7.9 8.19688 8C8.19688 8.1 8.18138 8.19375 8.15038 8.28125C8.11888 8.36875 8.06563 8.45 7.99063 8.525L1.67187 14.8438C1.49687 15.0188 1.28138 15.1063 1.02538 15.1063C0.768875 15.1063 0.546875 15.0125 0.359375 14.825Z"
+                            fill="#17232E"/>
+                    </svg>
+                </a>
+            </div>
         </div>
-      </div>
     </div>
-  </main>
-  ${require('../parts/footer.html')}
-  <div class="mfp-hide">
+</main>
+${require('../parts/footer.html')}
+<div class="mfp-hide">
 
-  </div>
+</div>
 
 </body>
 

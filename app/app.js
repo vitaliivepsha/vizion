@@ -18,10 +18,10 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/blog.html');
     require('./assets/templates/layouts/blog-not-found.html');
     require('./assets/templates/layouts/blog-article.html');
+    require('./assets/templates/layouts/reviews.html');
 
     // old
     require('./assets/templates/layouts/contacts.html');
-    require('./assets/templates/layouts/reviews.html');
     require('./assets/templates/layouts/delivery-payment.html');
     require('./assets/templates/layouts/warranty.html');
     require('./assets/templates/layouts/purchase.html');
@@ -387,6 +387,12 @@ $(function () {
 
     $('.spoiler-title').click(function () {
         $(this).toggleClass('active').next('.spoiler-content').slideToggle();
+    });
+
+    // reviews
+    $('.page-reviews__top-form').css('display', 'none');
+    $('.page-reviews__top-btn').click(function () {
+        $(this).toggleClass('active').closest('.page-reviews__top-wrapper').next().slideToggle();
     });
 
     // header-search
