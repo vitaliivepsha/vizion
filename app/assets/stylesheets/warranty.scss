@@ -7,7 +7,7 @@
       display: flex;
       @include bp(md) {
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 30px;
       }
     }
   }
@@ -87,18 +87,27 @@
     position: absolute;
     top: 52px;
     pointer-events: none;
+    z-index: 1;
 
-    &:nth-child(1) {
+    &:nth-of-type(1) {
+      width: 202px;
+      height: 202px;
+      top: 52px;
       left: 97px;
     }
 
-    &:nth-child(2) {
+    &:nth-of-type(2) {
+      width: 202px;
+      height: 202px;
+      top: 52px;
       right: 136px;
     }
   }
 }
 
 .page-warranty__block-inner {
+  position: relative;
+  z-index: 2;
   p {
     max-width: 570px;
     margin: 0;
