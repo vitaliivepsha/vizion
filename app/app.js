@@ -369,8 +369,8 @@ $(function () {
 
     $(".obl.select").SumoSelect({
         search: true,
-        searchText: "Найти",
-        noMatch: "Не найдено",
+        searchText: "",
+        noMatch: "Не знайдено",
         forceCustomRendering: true
     });
 
