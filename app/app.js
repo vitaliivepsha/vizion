@@ -26,9 +26,9 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/faq.html');
     require('./assets/templates/layouts/return.html');
+    require('./assets/templates/layouts/delivery-payment.html');
 
     // old
-    require('./assets/templates/layouts/delivery-payment.html');
     require('./assets/templates/layouts/warranty.html');
     require('./assets/templates/layouts/purchase.html');
     require('./assets/templates/layouts/checkout.html');
