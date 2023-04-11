@@ -202,6 +202,9 @@
   right: 0;
   position: fixed;
   z-index: 11;
+  @include bp(xs) {
+    bottom: 110px;
+  }
   &.active{
     visibility: visible;
     opacity: 1;
@@ -224,16 +227,12 @@
   align-items: center;
   justify-content: center;
   transition: linear .2s;
-  @include bp(xs) {
-    width: 45px;
-    height: 45px;
-  }
   &:hover{
     background: rgba(108, 108, 108, 0.6);
   }
   @include bp(xs) {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
   svg{
     transform: scale(1, -1);
