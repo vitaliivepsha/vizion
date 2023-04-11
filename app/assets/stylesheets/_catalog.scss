@@ -79,16 +79,19 @@
     @include bp(xs) {
       margin-top: -11px;
     }
+
     .catalog-filter__video-wrapper {
       height: 50vw;
-     @media (max-width: 480px) {
-       height: 195px;
-     }
+      @media (max-width: 480px) {
+        height: 195px;
+      }
     }
+
     @include bp(md) {
       display: block;
     }
   }
+
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 50px;
@@ -631,24 +634,21 @@
 // ii
 .catalog-main__sort-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: end;
   justify-content: space-between;
   margin-bottom: 13px;
-  height: 26px;
   min-height: 26px;
-  max-height: 26px;
   @include bp(xs) {
-    margin-top: -30px;
     margin-bottom: 9px;
-    height: 41px;
-    min-height: 41px;
-    max-height: 41px;
+    min-height: 29px;
   }
 }
 
 .dropdown-sort {
   position: relative;
   margin-left: auto;
+  padding-top: 22px;
 
   i {
     transition: transform ease-in-out 0.3s;
@@ -765,6 +765,9 @@
   align-self: end;
   padding-left: 14px;
   margin-bottom: -2px;
+  @include bp(xs) {
+    padding-top: 15px;
+  }
 }
 
 .catalog-main__categories-title {
@@ -784,6 +787,7 @@
   font-size: 12px;
   line-height: 120%;
   color: $main;
+  text-decoration: none !important;
 
   &:hover {
     color: $red;
@@ -1043,6 +1047,7 @@
 
   & div {
     white-space: nowrap;
+
     span {
       &:nth-child(1) {
         font-weight: 500;
@@ -1132,7 +1137,6 @@
 .product-card__bot-btn-order {
   display: none;
   width: 140px;
-  margin-left: auto;
   padding: 5px;
   background-color: #F7F7F7;
   border: 1px solid $main;
@@ -1179,6 +1183,7 @@
     }
   }
 }
+
 // ii
 .catalog-main__items {
   display: flex;
@@ -1790,18 +1795,15 @@
   @include bp(md) {
     display: flex;
     gap: 20px;
-    @include bp(sm) {
-      gap: 10px;
-    }
-    @include bp(xs) {
-      margin-bottom: -13px;
-      gap: 4px;
-    }
+  }
+  @include bp(sm) {
+    gap: 10px;
   }
   @include bp(xs) {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 17px;
+    margin-bottom: 0;
+    gap: 4px;
   }
 
   .btn {
@@ -1868,14 +1870,17 @@
 }
 
 .catalog-mob__filters {
+  display: flex;
+  flex-direction: column;
   bottom: 0;
   top: 0;
-  width: 285px;
-  right: -285px;
+  width: 300px;
+  right: -300px;
   transition: linear .3s;
   position: fixed;
   z-index: 1100;
-  background-color: #fff;
+  background: #F2F2F2;
+  //box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
 
   &.active {
     right: 0;
@@ -1883,40 +1888,57 @@
 
   &.mob-categories {
     .catalog-mob__filters-head {
-      background-color: $blue-mid;
+      background-color: $red;
     }
+  }
+
+  .catalog-filer__block{
+    margin-bottom: 10px;
   }
 }
 
+// ii
 .catalog-mob__filters-head {
-  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 40px;
   padding: 15px;
   color: #fff;
-  background-color: $blue-mid;
+  background-color: $main;
 }
 
 .catalog-mob__filters-back {
   display: flex;
   align-items: center;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 13px;
+  cursor: pointer;
+  transition: linear 0.2s;
+
+  &:active,
+  &:hover {
+    opacity: 0.8;
+  }
 
   svg {
     margin-right: 10px;
+    margin-top: -2px;
   }
 }
 
+// ii
 .catalog-mob__filters-clear {
   display: none;
+  gap: 7px;
   align-items: center;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 12px;
   line-height: 120%;
-  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.02em;
+  color: #F25733;
+  cursor: pointer;
 
   > span {
     display: flex;
@@ -1937,28 +1959,30 @@
 
 .catalog-mob__filters-body {
   padding: 15px;
-  height: calc(100vh - 110px);
+  //height: calc(100vh - 110px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
+  height: 100%;
 }
 
+// ii
 .catalog-mob__filters-count {
-  text-align: center;
-  font-weight: 500;
+  margin-top: auto;
+  font-weight: 400;
   font-size: 12px;
-  line-height: 120%;
-  color: rgba(56, 56, 56, 0.8);
+  line-height: 12px;
 }
 
 .catalog-mob__filters-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 15px;
+  padding: 10px 15px;
   height: 60px;
-  background: #fff;
+  margin-top: auto;
+  background: #FFFFFF;
   box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
 
   .btn {
@@ -1966,14 +1990,15 @@
     width: 100%;
     min-width: 120px;
     filter: none;
+    height: 40px;
 
     &.btn-back {
-      border-color: $blue;
+      border-color: $accent;
       background-color: #fff;
-      color: $blue;
+      color: $accent;
 
       &:hover {
-        background-color: $blue;
+        background-color: $accent;
         color: #fff;
       }
     }
