@@ -25,13 +25,13 @@ if (process.env.NODE_ENV !== 'production') {
     require('./assets/templates/layouts/video-gallery-article.html');
     require('./assets/templates/layouts/contacts.html');
     require('./assets/templates/layouts/faq.html');
-    require('./assets/templates/layouts/return.html');
+    require('./assets/templates/layouts/warranty.html');
     require('./assets/templates/layouts/delivery-payment.html');
+    require('./assets/templates/layouts/return.html');
+    require('./assets/templates/layouts/checkout.html');
 
     // old
-    require('./assets/templates/layouts/warranty.html');
     require('./assets/templates/layouts/purchase.html');
-    require('./assets/templates/layouts/checkout.html');
     require('./assets/templates/layouts/catalog-list.html');
     require('./assets/templates/layouts/price.html');
 }
@@ -373,8 +373,8 @@ $(function () {
 
     $(".obl.select").SumoSelect({
         search: true,
-        searchText: "Найти",
-        noMatch: "Не найдено",
+        searchText: "",
+        noMatch: "Не знайдено",
         forceCustomRendering: true
     });
 

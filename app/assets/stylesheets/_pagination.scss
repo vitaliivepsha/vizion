@@ -9,6 +9,9 @@
     align-items: center;
     margin: 0 30px;
     gap: 2px;
+    @include bp(xs) {
+      margin: 0 20px;
+    }
 
     li {
       flex-shrink: 0;
