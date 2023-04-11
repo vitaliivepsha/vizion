@@ -1,5 +1,12 @@
 .section-bestsellers {
   padding: 35px 0;
+  overflow: hidden;
+  @include bp(xs) {
+    padding: 25px 0;
+  }
+  +.section-advantages{
+    margin-top: -65px;
+  }
 }
 
 .products-slider {
@@ -28,11 +35,17 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  @include bp(xs) {
+    margin-bottom: 12px;
+  }
 }
 
 .products-slider-arrows {
   display: flex;
   gap: 19px;
+  @include bp(xs) {
+    gap: 7px;
+  }
   .products-arrow {
     display: flex;
     flex-wrap: wrap;
@@ -45,6 +58,10 @@
     border: none;
     background: #fff;
     cursor: pointer;
+    @include bp(xs) {
+      width: 25px;
+      height: 25px;
+    }
     &.slick-disabled {
       background-color: $text-grey;
       opacity: 0.5;
@@ -52,6 +69,12 @@
     }
     &.slick-hidden{
       display: none;
+    }
+    svg{
+      @include bp(xs) {
+        width: 7px;
+        height: 12px;
+      }
     }
   }
   .products-arrow-prev {

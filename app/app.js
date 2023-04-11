@@ -166,6 +166,10 @@ $(function () {
         $('.mobile-menu__lvl4').removeClass('show');
     });
 
+    $('.mobile-menu__list .has-submenu > span > i').click(function () {
+        $(this).closest('li').toggleClass('active').find('ul').slideToggle();
+    });
+
 
     // mobile btn
     $('.mobile-btn').on('click', function () {

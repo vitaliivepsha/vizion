@@ -1,5 +1,8 @@
 .section-consult {
   padding: 40px 0 75px;
+  @include bp(xs) {
+    padding: 25px 0 45px;
+  }
 }
 
 .section-consult__wrapper {
@@ -7,6 +10,9 @@
   border-radius: 10px;
   overflow: hidden;
   padding: 54px 30px 60px;
+  @include bp(xs) {
+    padding: 40px 18px 30px;
+  }
   >picture{
     position: absolute;
     top: 0;
@@ -26,6 +32,7 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  max-width: 100%;
   .section-title{
     display: block;
     text-transform: uppercase;

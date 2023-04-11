@@ -141,7 +141,7 @@
     display: block;
     content: "";
     width: 15px;
-    height: 15x;
+    height: 15px;
     // star-empty
     -webkit-mask: url("../images/icons/star.svg");
     mask: url("../images/icons/star.svg");
@@ -208,7 +208,6 @@
 
 .reviews-item__rating {
   margin-bottom: 7px;
-
   .rating-star.active {
     &:before {
       content: "";

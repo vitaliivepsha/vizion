@@ -183,6 +183,11 @@ main {
   cursor: pointer;
   outline: none !important;
   box-shadow: none;
+  @include bp(xs) {
+    height: 40px;
+    font-size: 14px;
+    line-height: 13px;
+  }
   &:focus,
   &:hover {
     outline: none !important;
@@ -258,9 +263,6 @@ main {
     z-index: 2;
     pointer-events: none;
     font-family: $default;
-    @include bp(xs) {
-      top: 10px;
-    }
   }
 }
 

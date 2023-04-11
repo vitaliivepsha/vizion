@@ -1,5 +1,8 @@
 .section-reviews {
   padding: 35px 0;
+  @include bp(xs) {
+    padding: 25px 0;
+  }
 }
 
 .reviews-head{
@@ -7,11 +10,60 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 20px;
+  @include bp(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .section-title{
+    @include bp(xs) {
+      margin-bottom: 9px;
+    }
+  }
 }
 
 .reviews-slider {
   .reviews-item {
+    display: flex !important;
+    flex-direction: column;
     min-height: 300px;
+    padding: 30px 30px 39px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    @include bp(xs) {
+      padding: 30px 20px;
+    }
+    .rating-star.active {
+      &:before {
+        background-color: $red;
+      }
+    }
+  }
+  .reviews-item__head{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 39px;
+    @include bp(xs) {
+      margin-bottom: 29px;
+    }
+  }
+  .reviews-item__text{
+    font-size: 14px;
+    line-height: 150%;
+  }
+  .reviews-item__footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 130%;
+    margin-top: 30px;
+  }
+  .reviews-item__date{
+    color: $grey;
+  }
+  .reviews-item__name{
+    font-weight: 500;
+    color: $main;
   }
   .slick-list {
     margin: 0 -15px;
