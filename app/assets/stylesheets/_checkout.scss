@@ -1,6 +1,6 @@
 .checkout-page {
   margin-top: 30px;
-  margin-bottom: 80px;
+  margin-bottom: 135px;
   padding-top: 45px;
   border-top: 1px solid $text-grey;
   @include bp(xs) {
@@ -181,7 +181,9 @@
           height: 40px;
           display: flex;
           align-items: center;
-          padding-left: 10px;
+          @include bp(xs) {
+            padding-left: 10px;
+          }
 
           &.disabled {
             display: none;

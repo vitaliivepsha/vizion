@@ -16,7 +16,7 @@
   position: relative;
   display: block;
   margin: 0;
-  padding-left: 25px;
+  padding-left: 22px;
   font-weight: 500;
   font-size: 42px;
   line-height: 40px;
@@ -27,19 +27,26 @@
     line-height: 32px;
   }
   @include bp(sm) {
-    padding-left: 25px;
+    padding-left: 18px;
     font-size: 21px;
     line-height: 130%;
   }
+  @include bp(xs) {
+    padding-left: 22px;
+  }
+
 
   &:before {
     content: "";
     position: absolute;
     left: 0;
-    top: 9px;
+    top: 16px;
     width: 10px;
     height: 10px;
     background-color: $red;
+    @include bp(md) {
+      top: 9px;
+    }
     @include bp(sm) {
       width: 7px;
       height: 7px;
