@@ -1,9 +1,15 @@
 .section-assortment{
   padding: 100px 0 70px;
   position: relative;
+  @include bp(xs) {
+    padding: 30px 0 25px;
+  }
   .anchor{
     position: absolute;
     top: -28px;
+    @include bp(xs) {
+      display: none;
+    }
   }
 }
 
@@ -16,6 +22,11 @@
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
+  @include bp(xs) {
+    font-size: 21px;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
 }
 
 .section-title{
@@ -25,8 +36,31 @@
   display: list-item;
   list-style-type: square;
   margin: 0 0 0 22px;
+  @include bp(xs) {
+    font-size: 21px;
+    line-height: 20px;
+    list-style-type: none;
+    display: block;
+    margin-left: 0;
+  }
+  &:before{
+    display: none;
+    content: "\25A0";
+    color: $red;
+    font-size: 12px;
+    line-height: 12px;
+    position: relative;
+    top: -3px;
+    margin-right: 13px;
+    @include bp(xs) {
+      display: inline-block;
+    }
+  }
   &::marker{
     color: $red;
+    @include bp(xs) {
+      display: none;
+    }
   }
 }
 
@@ -36,8 +70,31 @@
   display: list-item;
   list-style-type: square;
   color: $main;
+  @include bp(xs) {
+    font-size: 12px;
+    line-height: 12px;
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 0;
+  }
+  &:before{
+    display: none;
+    content: "\25A0";
+    color: $red;
+    font-size: 12px;
+    line-height: 12px;
+    position: relative;
+    top: -1.5px;
+    margin-right: 7px;
+    @include bp(xs) {
+      display: inline-block;
+    }
+  }
   &::marker{
     color: $red;
+    @include bp(xs) {
+      display: none;
+    }
   }
 }
 
@@ -71,6 +128,9 @@
   background-color: $accent;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
+  @include bp(xs) {
+    padding: 55px 15px 20px 20px;
+  }
   &:before{
     position: absolute;
     content: '';
@@ -81,6 +141,10 @@
     filter: blur(50px);
     left: 28px;
     top: 183px;
+    @include bp(xs) {
+      top: 133px;
+      left: -12px;
+    }
   }
   &:after{
     position: absolute;
@@ -92,6 +156,9 @@
     filter: blur(50px);
     top: 83px;
     right: 119px;
+    @include bp(xs) {
+      display: none;
+    }
   }
   .section-subtitle{
     color: $text-grey;
@@ -99,6 +166,10 @@
     top: 30px;
     right: 40px;
     z-index: 1;
+    @include bp(xs) {
+      top: 23px;
+      right: 20px;
+    }
   }
   .section-more{
     justify-content: flex-end;
@@ -124,6 +195,10 @@
   font-size: 21px;
   line-height: 130%;
   text-transform: uppercase;
+  @include bp(xs) {
+    font-size: 16px;
+    margin-bottom: 23px;
+  }
   *{
     &:last-child{
       margin-bottom: 0;
@@ -138,6 +213,9 @@
   margin-bottom: 42px;
   font-size: 14px;
   line-height: 130%;
+  @include bp(xs) {
+    margin-bottom: 24px;
+  }
   *{
     &:last-child{
       margin-bottom: 0;
@@ -145,6 +223,9 @@
   }
   p{
     margin-bottom: 10px;
+    @include bp(xs) {
+      margin-bottom: 16px;
+    }
   }
 }
 

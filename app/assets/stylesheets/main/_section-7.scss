@@ -1,7 +1,13 @@
 .section-faq{
   padding: 35px 0;
+  @include bp(xs) {
+    padding: 25px 0;
+  }
   .section-title{
     margin-bottom: 23px;
+    @include bp(xs) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -10,6 +16,9 @@
   flex-wrap: wrap;
   padding-top: 38px;
   position: relative;
+  @include bp(xs) {
+    padding-top: 30px;
+  }
   &:before{
     display: block;
     position: absolute;
@@ -23,6 +32,9 @@
   }
   .col-lg-4{
     margin-bottom: 35px;
+    @include bp(xs) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -40,6 +52,9 @@
     font-size: 16px;
     line-height: 16px;
     margin-bottom: 10px;
+    @include bp(xs) {
+      margin-bottom: 7px;
+    }
   }
   >div{
     font-size: 14px;
@@ -65,11 +80,20 @@
     flex-direction: column;
     align-items: flex-start;
   }
+  @include bp(xs) {
+    padding: 15px 18px 20px;
+    margin-bottom: 30px;
+  }
   >picture{
     width: 59px;
     min-width: 59px;
     height: 59px;
     margin-right: 33px;
+    @include bp(xs) {
+      width: 49px;
+      min-width: 49px;
+      height: 49px;
+    }
     img{
       width: 100%;
       height: 100%;
@@ -81,6 +105,9 @@
     padding: 7px 20px 7px 0;
     @include bp(sm) {
       padding: 15px 0;
+    }
+    @include bp(xs) {
+      padding-bottom: 20px;
     }
     *{
       &:last-child{
@@ -102,6 +129,12 @@
         display: flex;
         align-items: center;
       }
+      @include bp(xs) {
+        height: 49px;
+        left: 82px;
+        font-size: 18px;
+        line-height: 120%;
+      }
     }
     p{
       font-size: 14px;
@@ -115,6 +148,9 @@
     @include bp(sm) {
       margin: 0 auto;
     }
+    @include bp(xs) {
+      width: 100%;
+    }
   }
 }
 
@@ -123,6 +159,9 @@
   border-radius: 10px;
   width: 100%;
   height: 457px;
+  @include bp(xs) {
+    height: calc(72vw - 30px);
+  }
   img{
     width: 100%;
     height: 100%;

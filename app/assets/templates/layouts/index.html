@@ -867,7 +867,7 @@
     <div class="section section-bestsellers">
       <div class="container">
           <div class="bestsellers-head">
-              <span class="section-title">Популярні категоріі</span>
+              <span class="section-title">Топ продажів</span>
               <div class="products-slider-arrows">
                   <div class="products-arrow products-arrow-prev" id="bestsellers-prev">
                       <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1221,7 +1221,7 @@
               </a>
           </div>
           <div class="reviews-slider slick-slider"
-               data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "arrows": true, "dots": false, "infinite": false, "responsive":[{"breakpoint":991,"settings":{"slidesToShow": 2, "slidesToScroll": 2}}, {"breakpoint":767,"settings":{"arrows": false, "slidesToShow": 1, "slidesToScroll": 1, "dots": false}}]}'>
+               data-slick='{"slidesToShow": 3, "slidesToScroll": 3, "arrows": true, "dots": false, "infinite": false, "responsive":[{"breakpoint":991,"settings":{"slidesToShow": 2, "slidesToScroll": 2}}, {"breakpoint":767,"settings":{"arrows": false, "infinite": true, "autoplay": true, "autoplaySpeed": 7000, "slidesToShow": 1, "slidesToScroll": 1, "dots": false}}]}'>
               <div class="reviews-item">
                   <div class="reviews-item__head">
                       <div class="rating-stars">
@@ -1361,9 +1361,13 @@
           </div>
           <div class="faq-pic">
               <picture>
-                  <source srcset="../../images/pixel.webp" data-original="../../images/faq-pic.webp" class="lazy-web" type="image/webp">
-                  <source srcset="../../images/pixel.jpg" data-original="../../images/faq-pic.jpg" class="lazy-web" type="image/jpg">
-                  <img src="../../images/pixel.jpg" data-original="../../images/faq-pic.jpg" class="lazy" alt="">
+                  <source media="(min-width: 575px)" srcset="../../images/faq-pic.webp" type="image/webp">
+                  <source media="(min-width: 575px)" srcset="../../images/faq-pic.jpg" type="image/jpg">
+                  <source srcset="../../images/pixel.webp" data-original="../../images/faq-pic__mob.webp" class="lazy-web"
+                          type="image/webp">
+                  <source srcset="../../images/pixel.jpg" data-original="../../images/faq-pic__mob.jpg" class="lazy-web"
+                          type="image/jpg">
+                  <img src="../../images/pixel.jpg" data-original="../../images/faq-pic__mob.jpg" class="lazy" alt="">
               </picture>
           </div>
       </div>
@@ -1380,7 +1384,7 @@
               </a>
           </div>
           <div class="blog-items row">
-              <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <a href="javascript:void(0)" class="blog-item">
                       <picture>
                           <source srcset="../../images/pixel.webp" data-original="../../images/blog-01.webp" class="lazy-web" type="image/webp">
@@ -1400,7 +1404,7 @@
                       </div>
                   </a>
               </div>
-              <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <a href="javascript:void(0)" class="blog-item">
                       <picture>
                           <source srcset="../../images/pixel.webp" data-original="../../images/blog-02.webp" class="lazy-web" type="image/webp">

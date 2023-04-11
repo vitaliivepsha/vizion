@@ -909,6 +909,38 @@
         }
       }
     }
+    &.has-submenu{
+      &.active{
+        >span{
+          >a{
+            opacity: .5;
+          }
+          >i{
+            transform: scale(1, -1);
+            opacity: .5;
+          }
+        }
+      }
+      >span{
+        >i{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: linear .2s;
+          bottom: 0;
+          margin-left: 3px;
+        }
+      }
+      >ul{
+        display: none;
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-bottom: 8px;
+        li{
+          margin-bottom: 15px;
+        }
+      }
+    }
     >span {
       display: flex;
       align-items: center;
@@ -998,6 +1030,32 @@
   >ul {
     flex-grow: 1;
     >li {
+      position: relative;
+      transition: linear .2s;
+      &:before{
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 100%;
+        background-color: $red;
+        top: 0;
+        right: 100%;
+        opacity: 0;
+        transition: linear .2s;
+      }
+      &:hover{
+        background-color: #fff;
+        &:before{
+          opacity: 1;
+        }
+        >span{
+          >a {
+            text-indent: 10px;
+            color: $red;
+            opacity: 1;
+          }
+        }
+      }
       &.has-children {
         >span {
           display: flex;
@@ -1016,12 +1074,6 @@
               left: 50%;
               transform: translate(-50%, -50%);
             }
-            svg{
-              @include bp(xs) {
-                width: 9px;
-                height: 9px;
-              }
-            }
           }
         }
       }
@@ -1033,17 +1085,30 @@
           line-height: 28px;
           color: $main;
           text-decoration: none;
+          flex-grow: 1;
+          transition: linear .2s;
           &:hover,
           &:focus {
+            color: $red;
+            opacity: 1;
             text-decoration: none;
           }
         }
         >i {
           height: 16px;
+          width: 12px;
+          min-width: 12px;
           display: none;
           align-items: center;
           justify-content: flex-end;
-          margin-left: 18px;
+          margin-left: 10px;
+          margin-right: 7px;
+          svg{
+            @include bp(xs) {
+              width: 9px;
+              height: 9px;
+            }
+          }
         }
       }
     }

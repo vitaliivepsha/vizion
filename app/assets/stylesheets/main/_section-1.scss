@@ -2,6 +2,10 @@
   position: relative;
   min-height: 650px;
   background-color: #fff;
+  @include bp(xs) {
+    min-height: unset;
+    padding-bottom: 23px;
+  }
   &:before{
     position: absolute;
     content: '';
@@ -25,6 +29,9 @@
     height: 42px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     top: calc(100% - 21px);
+    @include bp(xs) {
+      display: none;
+    }
   }
 }
 
@@ -225,6 +232,9 @@
     font-size: 14px;
     line-height: 13px;
     color: $grey;
+    @include bp(xs) {
+      margin-top: 9px;
+    }
     span{
       color: $main;
     }
@@ -236,8 +246,14 @@
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  @include bp(xs) {
+    height: calc(100vw - 30px);
+  }
   .slide{
     height: 563px;
+    @include bp(xs) {
+      height: calc(100vw - 30px);
+    }
     img{
       width: 100%;
       height: 100%;
@@ -259,14 +275,27 @@
     transition: linear .2s;
     border: none;
     font-size: 0;
+    @include bp(xs) {
+      width: 35px;
+      height: 35px;
+    }
     &.slick-prev{
       left: 30px;
+      @include bp(xs) {
+        left: 10px;
+      }
       &:before{
         margin-left: -1px;
+        @include bp(xs) {
+          margin-left: -3px;
+        }
       }
     }
     &.slick-next{
       right: 30px;
+      @include bp(xs) {
+        right: 10px;
+      }
       &:before{
         transform: scale(-1, -1);
         margin-right: -3px;
@@ -290,6 +319,10 @@
       -webkit-mask-size: contain;
       mask-size: contain;
       background-color: $main;
+      @include bp(xs) {
+        width: 15px;
+        height: 15px;
+      }
     }
   }
   .slick-dots{
@@ -299,6 +332,9 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 30px;
+    @include bp(xs) {
+      bottom: 22px;
+    }
     li{
       display: flex;
       margin-right: 15px;
