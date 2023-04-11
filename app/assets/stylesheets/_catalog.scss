@@ -22,16 +22,28 @@
   line-height: 40px;
   text-transform: uppercase;
   color: $main;
+  @include bp(md) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+  @include bp(sm) {
+    padding-left: 25px;
+    font-size: 21px;
+    line-height: 130%;
+  }
 
   &:before {
     content: "";
     position: absolute;
     left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 9px;
     width: 10px;
     height: 10px;
     background-color: $red;
+    @include bp(sm) {
+      width: 7px;
+      height: 7px;
+    }
   }
 
   span {

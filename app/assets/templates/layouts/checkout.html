@@ -97,39 +97,37 @@ ${require('../parts/header.html')}
                                     </select>
                                 </div>
                             </div>
-<!--                            <div class="deliver deliver-self">-->
-<!--                                <div class="input-wrapper">-->
-<!--                                    <label>Місто</label>-->
-<!--                                    <input class="input" type="text" name="city" data-title="Город">-->
-<!--                                </div>-->
-<!--                                <div class="input-wrapper">-->
-<!--                                    <label>Улица</label>-->
-<!--                                    <input class="input" type="text" name="country" data-title="Улица">-->
-<!--                                </div>-->
-<!--                                <div class="input-wrapper">-->
-<!--                                    <label>Дом</label>-->
-<!--                                    <input class="input" type="text" name="house" data-title="Дім">-->
-<!--                                </div>-->
-<!--                                <div class="input-wrapper">-->
-<!--                                    <label>Квартира</label>-->
-<!--                                    <input class="input" type="text" name="room" data-title="Квартира">-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!--                            <div class="deliver deliver-self">-->
+                            <!--                                <div class="input-wrapper">-->
+                            <!--                                    <label>Місто</label>-->
+                            <!--                                    <input class="input" type="text" name="city" data-title="Город">-->
+                            <!--                                </div>-->
+                            <!--                                <div class="input-wrapper">-->
+                            <!--                                    <label>Улица</label>-->
+                            <!--                                    <input class="input" type="text" name="country" data-title="Улица">-->
+                            <!--                                </div>-->
+                            <!--                                <div class="input-wrapper">-->
+                            <!--                                    <label>Дом</label>-->
+                            <!--                                    <input class="input" type="text" name="house" data-title="Дім">-->
+                            <!--                                </div>-->
+                            <!--                                <div class="input-wrapper">-->
+                            <!--                                    <label>Квартира</label>-->
+                            <!--                                    <input class="input" type="text" name="room" data-title="Квартира">-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
                             <div class="input-wrapper">
-                                <label>Способ оплаты</label>
+                                <label>Способ оплати</label>
                                 <select class="select">
-                                    <option selected>Наложенный платеж</option>
-                                    <option>Оплата картой</option>
+                                    <option selected>Накладений платіж</option>
+                                    <option>Оплата карткою</option>
                                 </select>
                             </div>
-                            <div class="input-wrapper chechout-comment">
-                                <label>Сообщение</label>
-                                <textarea class="textarea" name="message" data-title="Сообщение"
-                                          placeholder="Напишите сообщение"></textarea>
+                            <div class="input-wrapper chechout-comments">
+                                <label>Коментарій</label>
+                                <textarea class="textarea" name="message" data-title="Коментарій"></textarea>
                             </div>
                             <div class="chechout-form__footer">
-                                <span class="chechout-comment__btn">Ваш комментарий</span>
-                                <button class="btn" type="submit">Оформить заказ</button>
+                                <button class="btn" type="submit">Оформити замовлення</button>
                             </div>
                         </form>
 
@@ -140,67 +138,88 @@ ${require('../parts/header.html')}
                         <span class="checkout-order__title">Ваше замовлення</span>
                         <div class="checkout-goods">
                             <div class="checkout-goods__item">
-                                <div class="checkout-goods__wrapper">
+                                <span class="checkout-goods__item-close">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+<circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
+<path
+    d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
+    fill="#6C6C6C"/>
+</svg>
+                                </span>
+                                <div class="checkout-goods__item-wrapper">
                                     <div class="checkout-goods__item-pic">
+                                        <picture>
+                                            <source srcset="../../images/pixel.webp"
+                                                    data-original="../../images/pic-01.webp" class="lazy-web"
+                                                    type="image/webp">
+                                            <source srcset="../../images/pixel.png" data-original="../../images/pic-01.png"
+                                                    class="lazy-web" type="image/png">
+                                            <img src="../../images/pixel.png" data-original="../../images/pic-01.png"
+                                                 class="lazy" alt="">
+                                        </picture>
                                     </div>
                                     <div class="checkout-goods__item-about">
-                                        <a href="javascript:void(0)">Аппарат ИВЛ Drager Evita 2 Dura</a>
-                                        <span>04093485</span>
-                                        <div class="checkout-goods__item-price">12000 грн</div>
+                                        <a href="javascript:void(0)">Апарат штучної вентиляції легенів Inspiration 3e eVent
+                                            Medical </a>
+                                        <span>71264015</span>
                                     </div>
-
                                 </div>
                                 <div class="checkout-goods__item-counter">
-                                    <div class="quantity">
-                                        <button class="minus" type="button">-</button>
-                                        <input class="value" value="1" type="text">
-                                        <button class="plus" type="button">+</button>
+                                    <div class="checkout-goods__item-price">3446748 <span>грн</span></div>
+                                    <div class="checkout-goods__item-quantity">
+                                        <span class="minus">-</span>
+                                        <input class="value" value="1" type="text"
+                                               oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
+                                        <span class="plus">+</span>
                                     </div>
                                 </div>
-                                <span class="checkout-goods__item-close">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="6" cy="6" r="6" fill="#BBBBBB"/>
-                      <path d="M3.36719 3.43359L8.63505 8.56782" stroke="white"/>
-                      <path d="M8.56641 3.36719L3.43218 8.63505" stroke="white"/>
-                    </svg>
-                  </span>
                             </div>
                             <div class="checkout-goods__item">
-                                <div class="checkout-goods__wrapper">
+                                <span class="checkout-goods__item-close">
+                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+<circle cx="7.5" cy="7.5" r="7" stroke="#6C6C6C"/>
+<path
+    d="M9.94207 5.93151L8.32332 7.55026L9.94207 9.16901C10.1535 9.38047 10.1535 9.73047 9.94207 9.94193C9.8327 10.0513 9.69416 10.1023 9.55562 10.1023C9.41707 10.1023 9.27853 10.0513 9.16916 9.94193L7.55041 8.32318L5.93166 9.94193C5.82228 10.0513 5.68374 10.1023 5.5452 10.1023C5.40666 10.1023 5.26812 10.0513 5.15874 9.94193C5.05704 9.83901 5 9.70016 5 9.55547C5 9.41078 5.05704 9.27192 5.15874 9.16901L6.77749 7.55026L5.15874 5.93151C4.94728 5.72005 4.94728 5.37005 5.15874 5.15859C5.3702 4.94714 5.7202 4.94714 5.93166 5.15859L7.55041 6.77734L9.16916 5.15859C9.38062 4.94714 9.73062 4.94714 9.94207 5.15859C10.1535 5.37005 10.1535 5.72005 9.94207 5.93151Z"
+    fill="#6C6C6C"/>
+</svg>
+                                </span>
+                                <div class="checkout-goods__item-wrapper">
                                     <div class="checkout-goods__item-pic">
+                                        <picture>
+                                            <source srcset="../../images/pixel.webp"
+                                                    data-original="../../images/pic-01.webp" class="lazy-web"
+                                                    type="image/webp">
+                                            <source srcset="../../images/pixel.png" data-original="../../images/pic-01.png"
+                                                    class="lazy-web" type="image/png">
+                                            <img src="../../images/pixel.png" data-original="../../images/pic-01.png"
+                                                 class="lazy" alt="">
+                                        </picture>
                                     </div>
                                     <div class="checkout-goods__item-about">
-                                        <a href="javascript:void(0)">Аппарат ИВЛ Drager Evita 2 Dura</a>
-                                        <span>04093485</span>
-                                        <div class="checkout-goods__item-price">17000 грн</div>
+                                        <a href="javascript:void(0)">Апарат штучної вентиляції легенів Inspiration 3e eVent
+                                            Medical </a>
+                                        <span>71264015</span>
                                     </div>
-
                                 </div>
                                 <div class="checkout-goods__item-counter">
-                                    <div class="quantity">
-                                        <button class="minus" type="button">-</button>
-                                        <input class="value" value="1" type="text">
-                                        <button class="plus" type="button">+</button>
+                                    <div class="checkout-goods__item-price">3446748 <span>грн</span></div>
+                                    <div class="checkout-goods__item-quantity">
+                                        <span class="minus">-</span>
+                                        <input class="value" value="1" type="text"
+                                               oninput="this.value=this.value.replace(/[^0-9\.]/g,'');">
+                                        <span class="plus">+</span>
                                     </div>
                                 </div>
-                                <span class="checkout-goods__item-close">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="6" cy="6" r="6" fill="#BBBBBB"/>
-                      <path d="M3.36719 3.43359L8.63505 8.56782" stroke="white"/>
-                      <path d="M8.56641 3.36719L3.43218 8.63505" stroke="white"/>
-                    </svg>
-                  </span>
                             </div>
                         </div>
                         <div class="checkout-order__footer">
                             <div class="checkout-order__total">
-                                <span>Итого к оплате</span>
-                                <div>
-                                    <span>сумма</span>
-                                    <strong>36000 грн</strong>
-                                </div>
+                                <span>Загальна сумма:</span>
+                                <strong>3446748 <span>грн</span></strong>
                             </div>
-                            <div class="checkout-order__footnote">Без учета стоимости доставки</div>
+                            <div class="checkout-order__footnote">Без урахування суми за доставку</div>
                         </div>
                     </div>
                 </div>
