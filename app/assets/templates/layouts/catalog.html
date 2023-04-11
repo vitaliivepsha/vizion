@@ -1688,162 +1688,177 @@ ${require('../parts/header.html')}
             </div>
         </div>
     </div>
+    <!--  фильтры  -->
     <div class="catalog-mob__filters mob-filters">
         <div class="catalog-mob__filters-head">
             <div class="catalog-mob__filters-back mob-filters__close">
-                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M6.99382e-07 8L0.338983 7.67347L7.9661 -1.77809e-07L9.83051 1.79592L9.49153 2.12245L3.72881 8L10 14.2041L8.13559 16L6.99382e-07 8Z"
-                        fill="#fff"/>
+                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3204_19778)">
+                        <path d="M6.32031 1.0875C6.41406 1.18125 6.46094 1.29225 6.46094 1.4205C6.46094 1.5485 6.41406 1.65937 6.32031 1.75312L3.57344 4.5L6.32969 7.25625C6.41719 7.34375 6.46094 7.45312 6.46094 7.58437C6.46094 7.71562 6.41406 7.82812 6.32031 7.92187C6.22656 8.01562 6.11556 8.0625 5.98731 8.0625C5.85931 8.0625 5.74844 8.01562 5.65469 7.92187L2.50469 4.7625C2.46719 4.725 2.44056 4.68437 2.42481 4.64062C2.40931 4.59687 2.40156 4.55 2.40156 4.5C2.40156 4.45 2.40931 4.40312 2.42481 4.35937C2.44056 4.31562 2.46719 4.275 2.50469 4.2375L5.66406 1.07812C5.75156 0.990625 5.85931 0.946875 5.98731 0.946875C6.11556 0.946875 6.22656 0.99375 6.32031 1.0875Z" fill="white"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_3204_19778">
+                            <rect x="9" y="9" width="9" height="9" rx="4.5" transform="rotate(-180 9 9)" fill="white"/>
+                        </clipPath>
+                    </defs>
                 </svg>
                 Фильтры
             </div>
-            <div class="catalog-mob__filters-clear">
-                Очистить все
-                <span>
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.61328 1.72266L10.3931 10.2797" stroke="#0B4899" stroke-width="2"/>
-                        <path d="M10.2773 1.6123L1.7203 10.3921" stroke="#0B4899" stroke-width="2"/>
-                    </svg>
+            <div class="catalog-mob__filters-clear active">
+                Очистити усе
+                <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.7291 3.96375L10.7866 5.90625L12.7291 7.84875C12.9828 8.1025 12.9828 8.5225 12.7291 8.77625C12.5978 8.9075 12.4316 8.96875 12.2653 8.96875C12.0991 8.96875 11.9328 8.9075 11.8016 8.77625L9.85906 6.83375L7.91656 8.77625C7.78531 8.9075 7.61906 8.96875 7.45281 8.96875C7.28656 8.96875 7.12031 8.9075 6.98906 8.77625C6.86702 8.65275 6.79857 8.48613 6.79857 8.3125C6.79857 8.13887 6.86702 7.97225 6.98906 7.84875L8.93156 5.90625L6.98906 3.96375C6.73531 3.71 6.73531 3.29 6.98906 3.03625C7.24281 2.7825 7.66281 2.7825 7.91656 3.03625L9.85906 4.97875L11.8016 3.03625C12.0553 2.7825 12.4753 2.7825 12.7291 3.03625C12.9828 3.29 12.9828 3.71 12.7291 3.96375ZM16.3078 1.53125V10.2812C16.3078 11.1213 15.6253 11.8125 14.7766 11.8125H4.33781C3.80406 11.8125 3.32281 11.5413 3.04281 11.095L0.164062 6.48375C-0.0546875 6.13375 -0.0546875 5.67875 0.164062 5.32L3.04281 0.7175C3.32281 0.27125 3.81281 0 4.33781 0H14.7853C15.6253 0 16.3166 0.69125 16.3166 1.53125H16.3078ZM14.9953 1.53125C14.9953 1.40875 14.8991 1.3125 14.7766 1.3125H4.33781C4.25906 1.3125 4.18906 1.3475 4.15406 1.4175L1.34531 5.90625L4.15406 10.395C4.19781 10.4562 4.26781 10.5 4.33781 10.5H14.7853C14.9078 10.5 15.0041 10.4038 15.0041 10.2812V1.53125H14.9953Z" fill="#F25733"/>
+                </svg>
                 </span>
             </div>
         </div>
         <div class="catalog-mob__filters-body">
             <div>
                 <div class="catalog-filer__block">
-                      <span class="catalog-filer__title active">
-                          Производитель
-                          <i>
-                              <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
-                                   xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.24986 1.2501L0.749856 1.2501C0.704296 1.25024 0.659637 1.2628 0.620687 1.28644C0.581737 1.31008 0.549971 1.34389 0.528807 1.38423C0.507644 1.42458 0.497885 1.46994 0.500581 1.51542C0.503276 1.5609 0.518325 1.60478 0.544106 1.64235L2.79411 4.89235C2.88736 5.0271 3.11186 5.0271 3.20536 4.89235L5.45536 1.64235C5.4814 1.60486 5.49667 1.56095 5.49952 1.5154C5.50236 1.46984 5.49266 1.42438 5.47148 1.38394C5.4503 1.34351 5.41844 1.30966 5.37937 1.28606C5.34029 1.26246 5.2955 1.25002 5.24986 1.2501Z"
-                                    fill="#252525"/>
-                              </svg>
-                          </i>
-                      </span>
+                              <span class="catalog-filer__title active">
+                                  Виробник
+                                  <i>
+                                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                           xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3003_5373)">
+<path
+    d="M1.0875 2.67969C1.18125 2.58594 1.29225 2.53906 1.4205 2.53906C1.5485 2.53906 1.65937 2.58594 1.75312 2.67969L4.5 5.42656L7.25625 2.67031C7.34375 2.58281 7.45312 2.53906 7.58437 2.53906C7.71562 2.53906 7.82812 2.58594 7.92187 2.67969C8.01562 2.77344 8.0625 2.88444 8.0625 3.01269C8.0625 3.14069 8.01562 3.25156 7.92187 3.34531L4.7625 6.49531C4.725 6.53281 4.68437 6.55944 4.64062 6.57519C4.59687 6.59069 4.55 6.59844 4.5 6.59844C4.45 6.59844 4.40312 6.59069 4.35937 6.57519C4.31562 6.55944 4.275 6.53281 4.2375 6.49531L1.07812 3.33594C0.990625 3.24844 0.946875 3.14069 0.946875 3.01269C0.946875 2.88444 0.99375 2.77344 1.0875 2.67969Z"
+    fill="#17232E"/>
+</g>
+<defs>
+<clipPath id="clip0_3003_5373">
+<rect x="9" width="9" height="9" rx="4.5" transform="rotate(90 9 0)" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                                  </i>
+                              </span>
                     <div class="catalog-filter__body">
                         <ul class="catalog-filters">
                             <li>
-                                <a href="javascript:void(0)">Medtronic</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Stryker</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Philips</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Olympus</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Conmed</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Medtronic</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Stryker</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Philips</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Olympus</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Conmed</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Medtronic</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Stryker</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Philips</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Olympus</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Conmed</a>
+                                <a href="javascript:void(0)" class="current">Vizion</a>
                             </li>
                         </ul>
-                        <span class="catalog-filters__show-all">Показать все</span>
                     </div>
                 </div>
                 <div class="catalog-filer__block">
-                      <span class="catalog-filer__title">
-                          Страна
-                          <i>
-                              <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
-                                   xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.24986 1.2501L0.749856 1.2501C0.704296 1.25024 0.659637 1.2628 0.620687 1.28644C0.581737 1.31008 0.549971 1.34389 0.528807 1.38423C0.507644 1.42458 0.497885 1.46994 0.500581 1.51542C0.503276 1.5609 0.518325 1.60478 0.544106 1.64235L2.79411 4.89235C2.88736 5.0271 3.11186 5.0271 3.20536 4.89235L5.45536 1.64235C5.4814 1.60486 5.49667 1.56095 5.49952 1.5154C5.50236 1.46984 5.49266 1.42438 5.47148 1.38394C5.4503 1.34351 5.41844 1.30966 5.37937 1.28606C5.34029 1.26246 5.2955 1.25002 5.24986 1.2501Z"
-                                    fill="#252525"/>
-                              </svg>
-                          </i>
-                      </span>
-                    <div class="catalog-filter__body" style="display: none;">
+                              <span class="catalog-filer__title active">
+                                  Пропозиції
+                                  <i>
+                                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                           xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3003_5373)">
+<path
+    d="M1.0875 2.67969C1.18125 2.58594 1.29225 2.53906 1.4205 2.53906C1.5485 2.53906 1.65937 2.58594 1.75312 2.67969L4.5 5.42656L7.25625 2.67031C7.34375 2.58281 7.45312 2.53906 7.58437 2.53906C7.71562 2.53906 7.82812 2.58594 7.92187 2.67969C8.01562 2.77344 8.0625 2.88444 8.0625 3.01269C8.0625 3.14069 8.01562 3.25156 7.92187 3.34531L4.7625 6.49531C4.725 6.53281 4.68437 6.55944 4.64062 6.57519C4.59687 6.59069 4.55 6.59844 4.5 6.59844C4.45 6.59844 4.40312 6.59069 4.35937 6.57519C4.31562 6.55944 4.275 6.53281 4.2375 6.49531L1.07812 3.33594C0.990625 3.24844 0.946875 3.14069 0.946875 3.01269C0.946875 2.88444 0.99375 2.77344 1.0875 2.67969Z"
+    fill="#17232E"/>
+</g>
+<defs>
+<clipPath id="clip0_3003_5373">
+<rect x="9" width="9" height="9" rx="4.5" transform="rotate(90 9 0)" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                                  </i>
+                              </span>
+                    <div class="catalog-filter__body">
                         <ul class="catalog-filters">
                             <li>
-                                <a href="javascript:void(0)">США</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Япония</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Германия</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">Мадагаскар</a>
+                                <a href="javascript:void(0)">Акція</a>
                             </li>
                         </ul>
-                        <span class="catalog-filters__show-all">Показать все</span>
                     </div>
                 </div>
                 <div class="catalog-filer__block">
-                      <span class="catalog-filer__title">
-                          Наличие
-                          <i>
-                              <svg width="6" height="6" viewBox="0 0 6 6" fill="none"
-                                   xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M5.24986 1.2501L0.749856 1.2501C0.704296 1.25024 0.659637 1.2628 0.620687 1.28644C0.581737 1.31008 0.549971 1.34389 0.528807 1.38423C0.507644 1.42458 0.497885 1.46994 0.500581 1.51542C0.503276 1.5609 0.518325 1.60478 0.544106 1.64235L2.79411 4.89235C2.88736 5.0271 3.11186 5.0271 3.20536 4.89235L5.45536 1.64235C5.4814 1.60486 5.49667 1.56095 5.49952 1.5154C5.50236 1.46984 5.49266 1.42438 5.47148 1.38394C5.4503 1.34351 5.41844 1.30966 5.37937 1.28606C5.34029 1.26246 5.2955 1.25002 5.24986 1.2501Z"
-                                    fill="#252525"/>
-                              </svg>
-                          </i>
-                      </span>
-                    <div class="catalog-filter__body" style="display: none;">
+                              <span class="catalog-filer__title active">
+                                  Наявність
+                                  <i>
+                                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                           xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3003_5373)">
+<path
+    d="M1.0875 2.67969C1.18125 2.58594 1.29225 2.53906 1.4205 2.53906C1.5485 2.53906 1.65937 2.58594 1.75312 2.67969L4.5 5.42656L7.25625 2.67031C7.34375 2.58281 7.45312 2.53906 7.58437 2.53906C7.71562 2.53906 7.82812 2.58594 7.92187 2.67969C8.01562 2.77344 8.0625 2.88444 8.0625 3.01269C8.0625 3.14069 8.01562 3.25156 7.92187 3.34531L4.7625 6.49531C4.725 6.53281 4.68437 6.55944 4.64062 6.57519C4.59687 6.59069 4.55 6.59844 4.5 6.59844C4.45 6.59844 4.40312 6.59069 4.35937 6.57519C4.31562 6.55944 4.275 6.53281 4.2375 6.49531L1.07812 3.33594C0.990625 3.24844 0.946875 3.14069 0.946875 3.01269C0.946875 2.88444 0.99375 2.77344 1.0875 2.67969Z"
+    fill="#17232E"/>
+</g>
+<defs>
+<clipPath id="clip0_3003_5373">
+<rect x="9" width="9" height="9" rx="4.5" transform="rotate(90 9 0)" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                                  </i>
+                              </span>
+                    <div class="catalog-filter__body">
                         <ul class="catalog-filters">
                             <li>
-                                <a href="javascript:void(0)">В наличии</a>
+                                <a href="javascript:void(0)" class="current">Усі товари</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)">Под заказ</a>
+                                <a href="javascript:void(0)">В наявності</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)">Отсутствует</a>
+                                <a href="javascript:void(0)">Під замовлення</a>
                             </li>
                         </ul>
-                        <span class="catalog-filters__show-all">Показать все</span>
+                    </div>
+                </div>
+                <div class="catalog-filer__block">
+                              <span class="catalog-filer__title active">
+                                  Ціна
+                                  <i>
+                                      <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                           xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3003_5373)">
+<path
+    d="M1.0875 2.67969C1.18125 2.58594 1.29225 2.53906 1.4205 2.53906C1.5485 2.53906 1.65937 2.58594 1.75312 2.67969L4.5 5.42656L7.25625 2.67031C7.34375 2.58281 7.45312 2.53906 7.58437 2.53906C7.71562 2.53906 7.82812 2.58594 7.92187 2.67969C8.01562 2.77344 8.0625 2.88444 8.0625 3.01269C8.0625 3.14069 8.01562 3.25156 7.92187 3.34531L4.7625 6.49531C4.725 6.53281 4.68437 6.55944 4.64062 6.57519C4.59687 6.59069 4.55 6.59844 4.5 6.59844C4.45 6.59844 4.40312 6.59069 4.35937 6.57519C4.31562 6.55944 4.275 6.53281 4.2375 6.49531L1.07812 3.33594C0.990625 3.24844 0.946875 3.14069 0.946875 3.01269C0.946875 2.88444 0.99375 2.77344 1.0875 2.67969Z"
+    fill="#17232E"/>
+</g>
+<defs>
+<clipPath id="clip0_3003_5373">
+<rect x="9" width="9" height="9" rx="4.5" transform="rotate(90 9 0)" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+                                  </i>
+                              </span>
+                    <div class="catalog-filter__body">
+                        <div class="catalog-filters catalog-filters-price">
+                            <div class="extra-controls">
+                                <div>
+                                    <span>Від</span>
+                                    <input type="text" class="js-input-from" value="0"/>
+                                </div>
+                                <div>
+                                    <span>До</span>
+                                    <input type="text" class="js-input-to" value="0"/>
+                                </div>
+                            </div>
+                            <div class="range-slider">
+                                <input type="text" class="js-range-slider" value=""/>
+                            </div>
+                            <button type="button" class="filter-btn">Застосувати</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="catalog-mob__filters-count">Найдено 456 позиции</div>
+            <div class="catalog-mob__filters-count">Знайдено 346 позицій товару</div>
         </div>
         <div class="catalog-mob__filters-footer">
             <div class="btn btn-back mob-filters__close">Назад</div>
         </div>
     </div>
+    <!--  категории  -->
     <div class="catalog-mob__filters mob-categories">
         <div class="catalog-mob__filters-head">
             <div class="catalog-mob__filters-back mob-filters__close">
-                <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M6.99382e-07 8L0.338983 7.67347L7.9661 -1.77809e-07L9.83051 1.79592L9.49153 2.12245L3.72881 8L10 14.2041L8.13559 16L6.99382e-07 8Z"
-                        fill="#fff"/>
+                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3204_19778)">
+                        <path d="M6.32031 1.0875C6.41406 1.18125 6.46094 1.29225 6.46094 1.4205C6.46094 1.5485 6.41406 1.65937 6.32031 1.75312L3.57344 4.5L6.32969 7.25625C6.41719 7.34375 6.46094 7.45312 6.46094 7.58437C6.46094 7.71562 6.41406 7.82812 6.32031 7.92187C6.22656 8.01562 6.11556 8.0625 5.98731 8.0625C5.85931 8.0625 5.74844 8.01562 5.65469 7.92187L2.50469 4.7625C2.46719 4.725 2.44056 4.68437 2.42481 4.64062C2.40931 4.59687 2.40156 4.55 2.40156 4.5C2.40156 4.45 2.40931 4.40312 2.42481 4.35937C2.44056 4.31562 2.46719 4.275 2.50469 4.2375L5.66406 1.07812C5.75156 0.990625 5.85931 0.946875 5.98731 0.946875C6.11556 0.946875 6.22656 0.99375 6.32031 1.0875Z" fill="white"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_3204_19778">
+                            <rect x="9" y="9" width="9" height="9" rx="4.5" transform="rotate(-180 9 9)" fill="white"/>
+                        </clipPath>
+                    </defs>
                 </svg>
                 Категории
             </div>
