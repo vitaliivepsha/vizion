@@ -1,16 +1,16 @@
 .catalog-page {
   padding-bottom: 30px;
-
-  & + .section-reviews {
+  +.section-reviews {
     padding-top: 0;
     padding-bottom: 110px;
+    @include bp(xs) {
+      padding-bottom: 34px;
+    }
   }
-
   @include bp(xs) {
     padding-bottom: 25px;
   }
 }
-
 
 .page-title {
   position: relative;
@@ -34,8 +34,6 @@
   @include bp(xs) {
     padding-left: 22px;
   }
-
-
   &:before {
     content: "";
     position: absolute;
