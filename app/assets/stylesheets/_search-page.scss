@@ -9,23 +9,18 @@
 
 .search-result-empty {
   margin-bottom: 58px;
-
   .page-title {
     margin-bottom: 24px;
   }
-
   .search-result-page__text {
     font-weight: 400;
     font-size: 21px;
     line-height: 20px;
     color: $main;
-
     + .search-result-page__text {
       margin-top: 10px;
     }
-
   }
-
   .btn {
     margin-top: 27px;
     margin-bottom: 58px;
@@ -37,38 +32,67 @@
 
 .thank-you {
   padding-bottom: 242px;
-
+  @include bp(xs) {
+    padding-bottom: 95px;
+  }
   .page-title {
     margin-bottom: 24px;
+    @include bp(xs) {
+      margin-bottom: 22px;
+    }
   }
-
   .thank-you__order {
     margin-bottom: 31px;
     font-weight: 400;
     font-size: 21px;
     line-height: 20px;
     color: $main;
-
+    @include bp(sm) {
+      font-size: 18px;
+    }
+    @include bp(xs) {
+      font-size: 16px;
+      line-height: 15px;
+    }
     & span {
       margin-left: 12px;
       font-weight: 400;
       font-size: 21px;
       line-height: 20px;
       color: $red;
+      @include bp(sm) {
+        font-size: 18px;
+      }
+      @include bp(xs) {
+        font-size: 16px;
+        line-height: 15px;
+        display: block;
+        margin: 13px 0;
+      }
     }
   }
-
   .thank-you__text {
     font-weight: 400;
     font-size: 21px;
     line-height: 130%;
     color: $main;
+    @include bp(sm) {
+      font-size: 18px;
+    }
+    @include bp(xs) {
+      font-size: 16px;
+      line-height: 130%;
+    }
   }
-
   .btn {
     max-width: 267px;
     height: 45px;
     margin-top: 42px;
+    @include bp(xs) {
+      width: 215px;
+      height: 40px;
+      margin-top: 28px;
+    }
   }
 }
 
