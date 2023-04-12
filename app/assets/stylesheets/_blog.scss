@@ -1,10 +1,82 @@
 .blog{
   padding-bottom: 40px;
+  @include bp(xs) {
+    padding-bottom: 35px;
+  }
   .col-lg-6{
     margin-bottom: 30px;
+    @include bp(xs) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   .pagination{
     margin: 40px 0;
+    @include bp(xs) {
+      margin: 20px 0;
+    }
+  }
+  .blog-items{
+    display: flex;
+    flex-wrap: wrap;
+    .col-sm-12{
+      +.col-sm-12{
+        @include bp(md) {
+          margin-top: 0;
+        }
+        @include bp(xs) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .blog-item{
+    @include bp(xs) {
+      height: auto;
+      flex-direction: column;
+    }
+    >picture{
+      @include bp(xs) {
+        width: 100%;
+        height: calc(76.5vw - 30px);
+      }
+    }
+    >div{
+      @include bp(xs) {
+        width: 100%;
+        padding: 30px 15px 17px;
+      }
+    }
+    .blog-item__title {
+      @include bp(xs) {
+        min-height: 45px;
+      }
+    }
+    .blog-item__descr{
+      @include bp(xs) {
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+    .blog-item__footer{
+      @include bp(xs) {
+        flex-direction: row;
+        align-items: center;
+      }
+      > svg {
+        @include bp(xs) {
+          left: auto;
+          bottom: auto;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .blog-item__date{
+      @include bp(xs) {
+        width: 80px;
+      }
+    }
   }
 }
 
@@ -13,6 +85,11 @@
   align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 28px;
+  @include bp(xs) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
 }
 
 .blog-form{
@@ -22,6 +99,13 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
   border-radius: 3px;
   position: relative;
+  @include bp(sm) {
+    width: 50%;
+  }
+  @include bp(xs) {
+    width: 100%;
+    margin-top: 9px;
+  }
   input{
     padding-left: 47px;
     padding-right: 20px;
@@ -30,6 +114,11 @@
     height: 100%;
     border-radius: 3px;
     font-size: 14px;
+    @include bp(xs) {
+      padding-left: 33px;
+      padding-right: 15px;
+      font-size: 12px;
+    }
     &::placeholder{
       color: $grey;
     }
@@ -75,6 +164,9 @@
     border: none;
     background: transparent;
     padding: 0;
+    @include bp(xs) {
+      left: 0;
+    }
   }
 }
 
@@ -90,9 +182,39 @@
   margin-bottom: 20px;
   font-size: 21px;
   line-height: 130%;
+  @include bp(sm) {
+    font-size: 18px;
+  }
+  @include bp(xs) {
+    margin-top: 12px;
+    margin-bottom: 6px;
+    display: none;
+    font-size: 16px;
+    padding: 14px 15px;
+    align-items: flex-start;
+  }
+  &__mob{
+    display: none;
+    @include bp(xs) {
+      display: flex;
+    }
+  }
   svg{
     min-width: 33px;
     margin-right: 30px;
+    @include bp(xs) {
+      width: 21px;
+      min-width: 21px;
+      height: fit-content;
+      margin-right: 13px;
+    }
+  }
+}
+
+.blog-categories__wrapper{
+  @include bp(sm) {
+    overflow: auto;
+    width: calc(100vw - 15px);
   }
 }
 
@@ -104,13 +226,33 @@
   font-size: 14px;
   line-height: 13px;
   padding-bottom: 20px;
+  @include bp(sm) {
+    flex-wrap: nowrap;
+    min-width: max-content;
+    padding-right: 15px;
+    border: none;
+  }
+  @include bp(xs) {
+    padding-top: 0;
+    font-size: 12px;
+    line-height: 12px;
+    padding-bottom: 10px;
+  }
   li{
     margin: 10px 30px 10px 0;
+    @include bp(xs) {
+      margin: 6px 15px 6px 0;
+    }
     &:first-child{
       list-style-type: square;
       margin-left: 12px;
       &::marker{
         color: $blue;
+      }
+    }
+    &:last-child{
+      @include bp(sm) {
+        margin-right: 0;
       }
     }
     &.current{
