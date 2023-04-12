@@ -31,9 +31,13 @@
             </div>
             <div class="nf-pic">
                 <picture>
-                    <source srcset="../../images/pixel.webp" data-original="../../images/404.webp" class="lazy-web" type="image/webp">
-                    <source srcset="../../images/pixel.png" data-original="../../images/404.png" class="lazy-web" type="image/png">
-                    <img src="../../images/pixel.png" data-original="../../images/404.png" class="lazy" alt="">
+                    <source media="(min-width: 575px)" srcset="../../images/404.webp" type="image/webp">
+                    <source media="(min-width: 575px)" srcset="../../images/404.png" type="image/png">
+                    <source srcset="../../images/pixel.webp" data-original="../../images/404-mob.webp" class="lazy-web"
+                            type="image/webp">
+                    <source srcset="../../images/pixel.png" data-original="../../images/404-mob.png" class="lazy-web"
+                            type="image/png">
+                    <img src="../../images/pixel.png" data-original="../../images/404-mob.png" class="lazy" alt="">
                 </picture>
             </div>
         </div>
