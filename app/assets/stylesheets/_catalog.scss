@@ -829,6 +829,15 @@
 
       &.product-card__bot-btn-order {
         display: flex;
+        @include bp(xxs) {
+          font-size: 12px;
+        }
+        svg{
+          @include bp(xxs) {
+            width: 12px;
+            height: 12px;
+          }
+        }
       }
 
     }
@@ -1173,9 +1182,10 @@
 
 .product-card__bot-btn-cart {
   background-color: $red;
-
+  border-color: $red;
   &:hover {
-    background-color: $red;
+    background-color: $main;
+    border-color: $main;
     color: #fff;
 
     & svg path {

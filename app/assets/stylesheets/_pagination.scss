@@ -79,6 +79,12 @@
       border: 1px solid $text-grey;
       opacity: 0.5;
     }
+    svg{
+      @include bp(xs) {
+        width: 8px;
+        height: 15px;
+      }
+    }
   }
 
   .dots {
