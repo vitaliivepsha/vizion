@@ -1,5 +1,8 @@
 .page-reviews {
   padding-bottom: 53px;
+  @include bp(xs) {
+    padding-bottom: 60px;
+  }
 }
 
 .page-reviews__top-wrapper {
@@ -8,6 +11,10 @@
   justify-content: space-between;
   height: 45px;
   margin-bottom: 30px;
+  @include bp(xs) {
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
 }
 
 .page-head__top-text {
@@ -16,6 +23,10 @@
   font-size: 14px;
   line-height: 130%;
   color: $main;
+  @include bp(xs) {
+    font-size: 12px;
+    margin-top: 11px;
+  }
 }
 
 .page-reviews__top-btn {
@@ -23,7 +34,14 @@
   width: fit-content;
   min-width: 160px;
   box-shadow: none !important;
-
+  @include bp(xs) {
+    width: 135px;
+    min-width: 135px;
+    height: 35px;
+    position: relative;
+    top: -27px;
+    padding: 0 10px;
+  }
   &.active {
     border: 1px solid $main;
     background-color: transparent;
@@ -38,6 +56,11 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
   padding: 64px 40px 69px 40px;
+  @include bp(xs) {
+    margin-top: 6px;
+    margin-bottom: 40px;
+    padding: 33px 18px 48px;
+  }
 }
 
 .page-reviews__top-form-title {
@@ -47,11 +70,17 @@
   line-height: 21px;
   color: $text-grey;
   text-align: center;
-
+  @include bp(xs) {
+    font-size: 18px;
+    line-height: 17px;
+    margin-bottom: 26px;
+  }
   span {
     position: relative;
     padding-left: 23px;
-
+    @include bp(xs) {
+      padding-left: 13px;
+    }
     &:before {
       flex-shrink: 0;
       content: "";
@@ -62,6 +91,10 @@
       width: 10px;
       height: 10px;
       background-color: $red;
+      @include bp(xs) {
+        width: 7px;
+        height: 7px;
+      }
     }
   }
 
@@ -71,10 +104,8 @@
   width: 100%;
   max-width: 370px;
   margin: 0 auto;
-
   .btn {
     background-color: $red;
-
     &:hover,
     &:focus {
       background-color: #fff;
@@ -87,10 +118,22 @@
   display: flex;
   gap: 10px;
   margin-bottom: 14px;
-
+  @include bp(xs) {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 11px;
+  }
   .review-form__inner {
     flex-grow: 1;
     width: 50%;
+    @include bp(xs) {
+      width: 100%;
+    }
+    +.review-form__inner {
+      @include bp(xs) {
+        margin-top: 11px;
+      }
+    }
   }
 }
 
@@ -98,7 +141,6 @@
   .textarea {
     height: 78px;
   }
-
   label {
     display: block;
     margin-bottom: 5px;
@@ -107,6 +149,9 @@
     font-size: 12px;
     line-height: 12px;
     color: $text-grey;
+    @include bp(xs) {
+      margin-bottom: 3px;
+    }
   }
 }
 
@@ -116,7 +161,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   > span {
     font-style: normal;
     font-weight: 400;
@@ -195,6 +239,9 @@
 
 .page-reviews__content {
   margin-bottom: 60px;
+  @include bp(xs) {
+    margin-bottom: 40px;
+  }
 }
 
 .reviews-item {
@@ -204,10 +251,28 @@
   border-radius: 10px;
   min-height: 125px;
   margin-bottom: 20px;
+  @include bp(xs) {
+    padding: 20px;
+  }
 }
 
 .reviews-item__rating {
   margin-bottom: 7px;
+  @include bp(xs) {
+    margin-bottom: 10px;
+  }
+  .rating-star{
+    @include bp(xs) {
+      margin-right: 8px;
+    }
+    &:before{
+      @include bp(xs) {
+        display: flex;
+        width: 13px;
+        height: 12px;
+      }
+    }
+  }
   .rating-star.active {
     &:before {
       content: "";
@@ -223,12 +288,18 @@
   font-size: 14px;
   line-height: 150%;
   color: $main;
+  @include bp(xs) {
+    margin-bottom: 12px;
+  }
 }
 
 .reviews-item__bot {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  @include bp(xs) {
+    justify-content: space-between;
+  }
 }
 
 .reviews-item__date {
@@ -237,6 +308,9 @@
   font-size: 14px;
   line-height: 130%;
   color: $grey;
+  @include bp(xs) {
+    margin-right: 10px;
+  }
 }
 
 .reviews-item__name {

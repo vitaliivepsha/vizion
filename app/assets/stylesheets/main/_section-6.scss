@@ -178,7 +178,7 @@
 .rating-stars {
   display: flex;
   .rating-star {
-    margin-right: 5px;
+    margin-right: 8px;
     &:last-child {
       margin-right: 0;
     }
@@ -190,8 +190,8 @@
   display: flex !important;
   &:before {
     content: "";
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 12px;
     -webkit-mask: url("../images/icons/star.svg");
     mask: url("../images/icons/star.svg");
     -webkit-mask-position: center;
