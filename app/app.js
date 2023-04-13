@@ -104,7 +104,7 @@ $(function () {
         }, 100);
     });
 
-    $('.popup-btn').magnificPopup({
+    $('.popup-btn:not(.product-video)').magnificPopup({
         callbacks: {
             open: function(){
                 $('.mfp-wrap').css('overflow', 'initial').removeAttr('tabindex');

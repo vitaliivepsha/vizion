@@ -811,6 +811,10 @@
   border: 1px solid $text-grey;
   overflow: hidden;
   padding: 30px 65px 22px 61px;
+  @include bp(xs) {
+    padding: 13px 7px;
+    margin-bottom: 15px;
+  }
 }
 
 .availability-popup__item {
@@ -822,6 +826,11 @@
   width: 84px;
   max-height: 100px;
   margin-right: 7px;
+  @include bp(xs) {
+    width: 65px;
+    max-height: 65px;
+    margin-right: 11px;
+  }
   & picture {
     width: 100%;
     height: 100%;
@@ -835,7 +844,10 @@
 
 .availability-popup-about {
   padding-top: 11px;
-
+  @include bp(xs) {
+    width: calc(100% - 76px);
+    padding-top: 0;
+  }
   & a {
     display: block;
     margin-bottom: -3px;
@@ -843,12 +855,19 @@
     font-size: 14px;
     line-height: 130%;
     color: $main;
+    @include bp(xs) {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
   }
   & span {
     font-weight: 400;
     font-size: 12px;
     line-height: 130%;
     color: $grey;
+    @include bp(xs) {
+      display: block;
+    }
   }
 }
 
@@ -910,6 +929,9 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   width: 570px;
   max-width: calc(100vw - 30px);
+  @include bp(xs) {
+    padding: 29px 18px 48px;
+  }
   >.mfp-close {
     width: 30px;
     height: 30px;
@@ -956,6 +978,11 @@
   line-height: 29px;
   color: $main;
   text-align: center;
+  @include bp(xs) {
+    font-size: 21px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .popup-service__form-text{
@@ -964,26 +991,45 @@
   line-height: 130%;
   text-align: center;
   margin: 0 auto 14px;
+  @include bp(xs) {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
 }
 
 .popup-service__form-fields{
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  @include bp(xs) {
+    flex-direction: column;
+  }
   .btn{
     height: 45px;
     width: calc(50% - 8px);
+    @include bp(xs) {
+      height: 40px;
+      width: 100%;
+      margin-top: 20px;
+    }
   }
 }
 
 .popup-service__form-inner{
   width: calc(50% - 8px);
+  @include bp(xs) {
+    width: 100%;
+  }
   >label{
     font-weight: 400;
     color: $grey;
     margin-bottom: 5px;
     font-size: 12px;
     line-height: 12px;
+    @include bp(xs) {
+      display: block;
+      margin-bottom: 3px;
+    }
   }
   .input{
     border-color: $text-grey;
