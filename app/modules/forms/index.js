@@ -326,6 +326,8 @@ module.exports = function () {
             fd.append('data', JSON.stringify(data));
 
             let url = form.attr('action') || '/sendmail';
+
+            let btn_txt = $(this).data('success-btn');
             $.ajax({
                 url: url,
                 type: 'POST',
@@ -374,6 +376,9 @@ module.exports = function () {
                                 showCancelButton: true,
                                 timer: 3000
                             });
+                            setTimeout(function () {
+                                $('.swal2-confirm').html(btn_txt);
+                            }, 100);
                             swal(form.data('success-title'), form.data('success-message'), 'success').then(() => {
                                 location.reload(true);
                                 tr.hide();
@@ -389,6 +394,9 @@ module.exports = function () {
                                 showCancelButton: true,
                                 timer: 3000
                             });
+                            setTimeout(function () {
+                                $('.swal2-confirm').html(btn_txt);
+                            }, 100);
                             swal(form.data('error-title'), form.data('error-message'), 'error').then(() => {
                                 location.reload(true);
                                 tr.hide();
@@ -411,6 +419,9 @@ module.exports = function () {
                             showCancelButton: true,
                             //timer: 3000
                         });
+                        setTimeout(function () {
+                            $('.swal2-confirm').html(btn_txt);
+                        }, 100);
                         swal(form.data('error-title'), form.data('error-message'), 'error').then(() => {
                             location.reload(true);
                             //tr.hide();
