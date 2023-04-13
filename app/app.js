@@ -808,6 +808,36 @@ $(function () {
         $('body').removeClass('filters-opened');
     });
 
+    $(document).on('click', '.mob-categories .has-children.lvl1 > span', function(){
+        $(this).next('.lvl2').addClass('active');
+        $(this).parent().addClass('active');
+    });
+
+    $(document).on('click', '.mob-categories .go-back.l2', function(){
+        $(this).closest('.lvl2').removeClass('active');
+        $(this).parents('.has-children').removeClass('active');
+    });
+
+    $(document).on('click', '.mob-categories .has-children.lvl2 > span', function(){
+        $(this).next('.lvl3').addClass('active');
+        $(this).parent().addClass('active');
+    });
+
+    $(document).on('click', '.mob-categories .go-back.l3', function(){
+        $(this).closest('.lvl3').removeClass('active');
+        $(this).parents('.has-children').removeClass('active');
+    });
+
+    $(document).on('click', '.mob-categories .has-children.lvl3 > span', function(){
+        $(this).next('.lvl4').addClass('active');
+        $(this).parent().addClass('active');
+    });
+
+    $(document).on('click', '.mob-categories .go-back.l4', function(){
+        $(this).closest('.lvl4').removeClass('active');
+        $(this).parents('.has-children').removeClass('active');
+    });
+
     // select
 
     $('.select').SumoSelect({

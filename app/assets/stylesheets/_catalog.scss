@@ -135,7 +135,7 @@
   line-height: 130%;
   transition: all ease 0.3s;
 
-  &:hover {
+  /*&:hover {
     color: $red;
 
     i {
@@ -145,7 +145,7 @@
         }
       }
     }
-  }
+  }*/
 
   i {
     width: 9px;
@@ -385,11 +385,11 @@
 
       &:hover {
         text-decoration: none;
-        color: $red;
+        /*color: $red;
 
         &:before {
           border: 1px solid $red;
-        }
+        }*/
       }
 
       &:focus {
@@ -2016,122 +2016,111 @@
 .catalog-mob__categories-body {
   height: calc(100vh - 50px);
   overflow: auto;
-  padding: 25px 15px;
-
-  > div {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -5px;
-
-    > span {
-      display: block;
-      padding: 0 5px;
-      width: 50%;
-      margin-bottom: 10px;
-
-      &.all-categories {
-        width: 100%;
-        margin-bottom: 0;
+  padding: 18px 17px 30px;
+  >div{
+    position: static;
+    width: auto;
+    height: auto;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 15px;
+    margin-bottom: 10px;
+    transform: none;
+  }
+  .show-all{
+    display: block;
+    font-size: 14px;
+    line-height: 28px;
+    text-decoration: underline;
+    color: $red;
+    margin-left: 20px;
+    margin-bottom: 12px;
+    padding-left: 0;
+    &:hover, &:focus{
+      text-decoration: none;
+    }
+  }
+  ul{
+    li{
+      position: relative;
+      margin-bottom: 14px;
+      a{
+        display: block;
+        padding-left: 20px;
+        font-size: 14px;
+        line-height: 14px;
+        text-decoration: none;
+        color: $main;
+        &:hover{
+          color: $grey;
+          text-decoration: none;
+        }
+        &:focus{
+          color: $grey;
+          text-decoration: none;
+        }
       }
-
-      a {
+      span{
+        position: absolute;
+        left: 0;
+        top: 1px;
         display: flex;
+        width: 13px;
+        min-width: 13px;
+        height: 13px;
         align-items: center;
         justify-content: center;
-        text-align: center;
-        color: $text;
-        text-decoration: none;
-        height: 58px;
-        width: 100%;
-        background: #fff;
-        box-shadow: 0 0 20px rgba($text, 0.2) !important;
-        border-radius: 5px;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 15px;
-        letter-spacing: 0.01em;
-        padding: 8px;
-        word-break: break-all;
-
-        &:hover {
-          box-shadow: none;
-          color: #fff !important;
-          background-color: $blue-mid;
+        transition: linear .2s;
+        &:after{
+          position: absolute;
+          z-index: 1;
+          content: '';
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: calc(100% + 10px);
+          height: calc(100% + 10px);
+        }
+        >svg{
+          width: 9px;
+          height: 9px;
         }
       }
     }
   }
 }
 
-//.catalog-main__checked-filters {
-//  margin-top: -5px;
-//  padding: 0 15px 15px;
-//  display: flex;
-//  justify-content: center;
-//  flex-wrap: wrap;
-//  font-size: 11px;
-//  line-height: 130%;
-//  margin-bottom: 15px;
-//  @include bp(sm) {
-//    justify-content: flex-start;
-//    padding: 0;
-//    margin-top: 15px;
-//  }
-//
-//  > span {
-//    margin: 3px 0;
-//    font-weight: 400;
-//    padding-right: 14px;
-//    color: rgba($text, .5);
-//    @include bp(xs) {
-//      margin: 5px 0;
-//    }
-//  }
-//}
-
-//.catalog-main__checked-filter {
-//  display: flex;
-//  align-items: center;
-//  font-style: normal;
-//  font-size: 11px;
-//  line-height: 120%;
-//  letter-spacing: 0.02em;
-//  margin: 3px 15px 3px 0;
-//  color: $text;
-//  text-decoration: none;
-//  @include bp(xs) {
-//    margin: 5px 15px 5px 0;
-//  }
-//
-//  &:hover, &:focus {
-//    text-decoration: none;
-//    color: $blue-mid;
-//
-//    svg {
-//      circle {
-//        fill: $blue-mid;
-//      }
-//    }
-//  }
-//
-//  &.clear-all {
-//    color: $red;
-//
-//    &:hover {
-//      color: $red;
-//
-//      svg {
-//        circle {
-//          fill: $red;
-//        }
-//      }
-//    }
-//  }
-//
-//  svg {
-//    margin-left: 4px;
-//  }
-//}
+.catalog-mob__filters{
+  .lvl2, .lvl3, .lvl4{
+    &:not(.has-children){
+      display: none;
+      position: fixed;
+      bottom: 0;
+      top: 0;
+      width: 300px;
+      right: -300px;
+      transition: linear 0.3s;
+      background-color: #F2F2F2;
+      &.active{
+        display: block;
+        right: 0;
+      }
+    }
+    &.active.has-children{
+      position: static;
+    }
+  }
+  .lvl2{
+    z-index: 1101;
+  }
+  .lvl3{
+    z-index: 1102;
+  }
+  .lvl4{
+    z-index: 1103;
+  }
+}
 
 .search-results__main-wrapper {
   min-height: 180px;
