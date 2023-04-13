@@ -615,6 +615,11 @@
     font-size: 0;
     opacity: 1;
     cursor: pointer;
+    @include bp(sm) {
+      right: 0;
+      top: auto;
+      bottom: calc(100% + 10px);
+    }
     & svg path {
       fill: $grey;
     }
@@ -780,6 +785,11 @@
     font-size: 0;
     opacity: 1;
     cursor: pointer;
+    @include bp(sm) {
+      right: 0;
+      top: auto;
+      bottom: calc(100% + 10px);
+    }
     & svg path {
       fill: $grey;
     }
@@ -849,6 +859,9 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   width: 570px;
   max-width: calc(100vw - 30px);
+  @include bp(xs) {
+    padding: 29px 18px 31px;
+  }
   >.mfp-close {
     width: 30px;
     height: 30px;
@@ -860,6 +873,11 @@
     font-size: 0;
     opacity: 1;
     cursor: pointer;
+    @include bp(sm) {
+      right: 0;
+      top: auto;
+      bottom: calc(100% + 10px);
+    }
     & svg path {
       fill: $grey;
     }
@@ -890,6 +908,11 @@
   line-height: 29px;
   color: $main;
   text-align: center;
+  @include bp(xs) {
+    font-size: 21px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
 }
 
 .popup-questions__text{
@@ -898,6 +921,10 @@
   line-height: 130%;
   text-align: center;
   margin: 0 auto 33px;
+  @include bp(xs) {
+    font-size: 14px;
+    margin-bottom: 21px;
+  }
 }
 
 .popup-questions__form{
@@ -905,6 +932,11 @@
     width: 235px;
     height: 45px;
     margin-top: 27px;
+    @include bp(xs) {
+      width: 100%;
+      height: 40px;
+      margin-top: 15px;
+    }
   }
 }
 
@@ -913,8 +945,12 @@
     font-weight: 400;
     color: $grey;
     margin-bottom: 5px;
+    display: block;
     font-size: 12px;
     line-height: 12px;
+    @include bp(xs) {
+      margin-bottom: 3px;
+    }
   }
   .input{
     border-color: $text-grey;
@@ -923,16 +959,35 @@
     display: block;
     height: 62px;
     border-color: $text-grey;
+    @include bp(xs) {
+      height: 90px;
+    }
   }
 }
 
 .popup-questions__form-row{
   margin-bottom: 15px;
+  @include bp(xs) {
+    margin-bottom: 11px;
+  }
   &.two-inputs{
     display: flex;
     justify-content: space-between;
+    @include bp(xs) {
+      flex-direction: column;
+    }
     .popup-questions__form-inner{
       width: calc(50% - 8px);
+      @include bp(xs) {
+        width: 100%;
+      }
+      .input-wrapper{
+        +.input-wrapper{
+          @include bp(xs) {
+            margin-top: 11px;
+          }
+        }
+      }
     }
   }
 }
@@ -953,6 +1008,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include bp(sm) {
+      right: 0;
+      top: auto;
+      bottom: calc(100% + 10px);
+    }
     &:hover {
       &:before {
         background-color: $red;
@@ -974,6 +1034,10 @@
       background-color: $grey;
     }
   }
+}
+
+.swal2-container{
+  padding: 0;
 }
 
 .swal2-modal {

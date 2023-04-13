@@ -96,6 +96,25 @@ body {
         z-index: 1045;
       }
     }
+    &.swal2-shown{
+      &.fixed-header{
+        .swal2-container{
+          top: 49px;
+        }
+      }
+      .swal2-container{
+        top: 119px;
+      }
+      .swal2-modal{
+        margin-top: 80px !important;
+      }
+      .header{
+        z-index: 1062;
+      }
+      .overlay {
+        z-index: 1061;
+      }
+    }
   }
 }
 
