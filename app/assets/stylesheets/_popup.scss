@@ -397,6 +397,9 @@
     width: 5px;
     transition: linear .2s;
     box-shadow: 1px 0 0 transparent;
+    @include bp(xs) {
+      width: 3px;
+    }
   }
   &::-webkit-scrollbar-thumb {
     background: $main;
@@ -404,6 +407,9 @@
     width: 5px;
     transition: linear .2s;
     cursor: grab;
+    @include bp(xs) {
+      width: 3px;
+    }
   }
   .cart-popup__item {
     & + .cart-popup__item {
@@ -414,12 +420,17 @@
     }
     .cart-popup__wrapper {
       display: flex;
+      align-items: center;
+      @include bp(xs) {
+        align-items: flex-start;
+      }
     }
     .cart-popup__item-close {
       margin-right: 15px;
       padding-top: 26px;
       cursor: pointer;
       transition: all ease-in-out 0.2s;
+      align-self: flex-start;
       @include bp(xs) {
         display: flex;
         position: relative;
@@ -454,7 +465,7 @@
       width: 90px;
       padding-right: 13px;
       @include bp(xs) {
-        width: 70px;
+        width: 83px;
       }
       & picture {
         width: 100%;
@@ -482,12 +493,10 @@
         font-size: 14px;
         line-height: 130%;
         color: $main;
-
         &:hover {
           color: $red;
         }
       }
-
       span {
         display: block;
         font-weight: 400;
@@ -496,7 +505,6 @@
         color: $grey;
       }
     }
-
     .cart-popup__item-price {
       flex-shrink: 0;
       margin-top: 27px;
@@ -512,21 +520,129 @@
         line-height: 130%;
       }
     }
+    .cart-popup__item-info{
+      width: calc(100% - 120px);
+      @include bp(xs) {
+        width: calc(100% - 99px);
+      }
+    }
+    .cart-popup__item-top{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 3px;
+      position: relative;
+      .cart-popup__item-price{
+        margin-top: 6px;
+        min-height: 26px;
+        @include bp(xs) {
+          position: absolute;
+          margin: 0;
+          top: calc(100%);
+          right: 0;
+          min-height: unset;
+        }
+      }
+    }
+    .cart-popup__item-name{
+      max-width: 230px;
+      display: block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 130%;
+      min-height: 26px;
+      color: $main;
+      text-decoration: none;
+      @include bp(xs) {
+        font-size: 12px;
+        max-width: 100%;
+        min-height: 32px;
+      }
+      &:hover {
+        color: $red;
+        text-decoration: none;
+      }
+    }
+    .cart-popup__item-bot{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      position: relative;
+      @include bp(xs) {
+        padding-top: 34px;
+        align-items: flex-end;
+        justify-content: flex-start;
+      }
+      .product-counter{
+        width: 158px;
+        display: flex;
+        justify-content: space-between;
+        @include bp(xs){
+        }
+        >input{
+          font-size: 14px;
+          font-weight: 500;
+          height: 20px;
+          width: calc(100% - 70px);
+          background-color: transparent;
+          border: 1px solid #CDCDCD;
+          border-radius: 2px;
+          text-align: center;
+          @include bp(xs) {
+            width: calc(100% - 90px);
+          }
+        }
+        >span{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          width: 30px;
+          height: 20px;
+          font-size: 14px;
+          font-weight: 500;
+          border: 1px solid #CDCDCD;
+          border-radius: 2px;
+          @include bp(xs) {
+            width: 40px;
+          }
+        }
+      }
+    }
+    .cart-popup__item-id{
+      color: $grey;
+      font-size: 12px;
+      line-height: 130%;
+      @include bp(xs) {
+        position: absolute;
+        top: -3px;
+      }
+    }
   }
 }
 
 .cart-popup__footer {
   padding: 15px 50px 44px 50px;
   border-top: 1px solid $text-grey;
+  @include bp(xs) {
+    padding: 16px 15px 25px;
+  }
   .cart-popup__total {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    @include bp(xs) {
+      margin-bottom: 11px;
+      align-items: baseline;
+    }
     > span {
       font-weight: 400;
       font-size: 16px;
       line-height: 130%;
       color: $main;
+      @include bp(xs) {
+        font-size: 14px;
+      }
     }
     div {
       font-weight: 500;
@@ -545,6 +661,10 @@
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    @include bp(xs) {
+      gap: 11px;
+      align-items: stretch;
+    }
     .mfp-close {
       position: static;
       display: flex;
@@ -565,6 +685,14 @@
       cursor: pointer;
       transition: all ease-in-out 0.2s;
       box-shadow: none;
+      @include bp(xs) {
+        padding: 11px 13px;
+        font-size: 14px;
+        line-height: 100%;
+        max-width: calc(46% - 5px);
+        height: inherit;
+        min-height: 40px;
+      }
       &:hover {
         color: #fff;
         background-color: $main;
@@ -589,7 +717,15 @@
       line-height: 130%;
       color: #fff;
       transition: all ease-in-out 0.2s;
-
+      @include bp(xs) {
+        padding: 11px 13px;
+        font-size: 14px;
+        line-height: 100%;
+        text-align: center;
+        max-width: calc(54% - 5px);
+        height: inherit;
+        min-height: 40px;
+      }
       &:hover {
         color: $main;
         background-color: #fff;
@@ -981,11 +1117,9 @@
       @include bp(xs) {
         width: 100%;
       }
-      .input-wrapper{
-        +.input-wrapper{
-          @include bp(xs) {
-            margin-top: 11px;
-          }
+      +.popup-questions__form-inner{
+        @include bp(xs) {
+          margin-top: 11px;
         }
       }
     }
