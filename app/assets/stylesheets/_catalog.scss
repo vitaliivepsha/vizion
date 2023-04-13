@@ -765,6 +765,7 @@
   margin-bottom: -2px;
   @include bp(xs) {
     padding-top: 15px;
+    padding-left: 0;
   }
 }
 
@@ -786,19 +787,18 @@
   line-height: 120%;
   color: $main;
   text-decoration: none !important;
-
   &:hover {
     color: $red;
   }
-
   svg {
     margin-left: 4px;
   }
-
   &.clear-all {
     margin-left: 12px;
     color: $red;
-
+    @include bp(xs) {
+      margin-left: 0;
+    }
     svg {
       margin-left: 6px;
     }

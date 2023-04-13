@@ -33,6 +33,25 @@ body {
       }
     }
   }
+  &.show-tel{
+    overflow: hidden;
+    .header-mob__phone.show-phone{
+      svg path{
+        fill: $red;
+      }
+    }
+    .header-mob__phones{
+      ul{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .overlay {
+      visibility: visible;
+      opacity: 1;
+      z-index: 997;
+    }
+  }
   &.open-mobile-menu {
     overflow: hidden;
   }
@@ -174,6 +193,9 @@ main {
   height: 100%;
   z-index: 998;
   background: rgba($main, 0.3);
+  @include bp(md) {
+    top: 50px;
+  }
 }
 
 .section {

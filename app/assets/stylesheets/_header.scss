@@ -88,6 +88,17 @@
   }
 }
 
+.header-phones{
+  li{
+    +li{
+      margin-top: 5px;
+      svg{
+        opacity: 0;
+      }
+    }
+  }
+}
+
 .header-phone{
   display: flex;
   align-items: center;
@@ -771,6 +782,41 @@
 .header-mob__right{
   display: flex;
   align-items: center;
+}
+
+.header-mob__phones{
+  ul{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 15px;
+    padding: 30px;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    background-color: #fff;
+    width: 320px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    z-index: -1;
+    @include bp(sm) {
+      right: 15px;
+    }
+    @include bp(xs) {
+      left: 0;
+      right: 0;
+    }
+    li{
+      margin-bottom: 4px;
+      a{
+        &:hover{
+          color: $red;
+        }
+      }
+    }
+  }
 }
 
 .header-mob__phone{
