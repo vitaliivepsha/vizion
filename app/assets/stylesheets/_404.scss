@@ -73,7 +73,8 @@
     }
     img {
       width: 100%;
-      height: fit-content;
+      //height: fit-content;
+      height: auto;
       object-fit: contain;
     }
   }

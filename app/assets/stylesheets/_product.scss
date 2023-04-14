@@ -855,7 +855,14 @@
 .section-bestsellers {
   &.product-page__bestsellers{
     overflow: hidden;
-    margin-bottom: -80px;
+    padding: 0;
+    padding-top: 20px;
+    + .product-page__bestsellers {
+      padding-top: 0;
+    }
+    @include bp(xs) {
+      margin-bottom: 20px;
+    }
   }
 }
 

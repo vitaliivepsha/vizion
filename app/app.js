@@ -97,7 +97,7 @@ $(function() {
     }, 100);
   });
 
-  $('.popup-btn:not(.product-video)').magnificPopup({
+  $('.popup-btn:not(.product-video, .catalog-filter__video-btn)').magnificPopup({
     callbacks: {
       open: function() {
         $('.mfp-wrap').css('overflow', 'initial').removeAttr('tabindex');
