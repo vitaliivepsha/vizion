@@ -159,6 +159,7 @@
           a{
             list-style-type: none;
             margin-left: 0;
+            margin-bottom: 10px;
             font-weight: 500;
             font-size: 16px;
             line-height: 18px;
@@ -171,8 +172,8 @@
           display: list-item;
           list-style-type: square;
           margin-left: 13px;
-          font-size: 12px;
-          line-height: 150%;
+          font-size: 14px;
+          line-height: 170%;
           &:hover {
             color: $grey;
           }
@@ -185,8 +186,8 @@
     >a{
       display: flex;
       align-items: center;
-      font-size: 10px;
-      line-height: 10px;
+      font-size: 12px;
+      line-height: 12px;
       color: $grey;
       svg{
         margin-left: 9px;
