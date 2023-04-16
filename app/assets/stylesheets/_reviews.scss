@@ -282,12 +282,19 @@
 }
 
 .reviews-item__text {
-  margin-bottom: 18px;
+  //margin-bottom: 18px;
+  margin-bottom: 0;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
   color: $main;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   @include bp(xs) {
     margin-bottom: 12px;
   }
