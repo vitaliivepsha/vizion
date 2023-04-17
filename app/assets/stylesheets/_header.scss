@@ -349,6 +349,7 @@
 }
 
 .header-search__wrapper {
+  height: 32px;
   margin-left: 30px;
 
   &.focus.active {
@@ -392,6 +393,20 @@
     border-radius: 3px;
     color: $grey;
     transition: all ease 0.2s;
+    @supports (-webkit-touch-callout: none) {
+      font-size: 16px;
+    }
+
+    &:focus {
+      @supports (-webkit-touch-callout: none) {
+        font-size: 16px;
+      }
+
+      &::placeholder {
+        color: transparent;
+      }
+    }
+
     @include bp(lg) {
       padding-left: 41px;
     }
@@ -938,6 +953,11 @@
   svg {
     width: 17px;
     height: 17px;
+    @include bp(xs) {
+      width: 19px;
+      height: 19px;
+    }
+
   }
 }
 
@@ -949,6 +969,10 @@
   svg {
     width: 22px;
     height: 22px;
+    @include bp(xs) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   > span {
@@ -1027,7 +1051,8 @@
 
     a {
       font-weight: 400;
-      font-size: 14px;
+      //font-size: 14px;
+      font-size: 16px;
       color: $main;
       text-decoration: none;
 
@@ -1042,7 +1067,7 @@
 
         > span {
           > a {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 500;
           }
 
@@ -1120,12 +1145,19 @@
       > b {
         display: flex;
         margin-right: 17px;
+        margin-top: -2px;
+
+        svg {
+          width: 15px;
+          height: 15px;
+        }
       }
 
       > a {
         display: block;
         font-weight: 400;
-        font-size: 14px;
+        //font-size: 14px;
+        font-size: 16px;
         color: $text;
         text-decoration: none;
 
@@ -1186,7 +1218,8 @@
     > a {
       display: flex;
       justify-content: flex-end;
-      font-size: 12px;
+      //font-size: 12px;
+      font-size: 16px;
       line-height: 28px;
       text-decoration: underline;
       color: $red;
@@ -1196,16 +1229,20 @@
   > .menu-back {
     position: relative;
     display: block;
-    padding-top: 30px;
+    padding-top: 35px;
     padding-bottom: 22px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 15px;
     color: $main;
     cursor: pointer;
 
     > i {
-      margin-right: 20px;
+      margin-right: 22px;
+
+      svg {
+        height: 10px;
+      }
     }
   }
 
@@ -1273,7 +1310,8 @@
         align-items: center;
 
         > a {
-          font-size: 14px;
+          //font-size: 14px;
+          font-size: 16px;
           line-height: 28px;
           color: $main;
           text-decoration: none;
@@ -1319,8 +1357,9 @@
   padding-top: 30px;
   border-top: 1px solid $text-grey;
   margin-bottom: 30px;
-  font-size: 12px;
-  line-height: 12px;
+  //font-size: 12px;
+  //line-height: 12px;
+  font-size: 14px;
 
   li {
     margin-bottom: 17px;

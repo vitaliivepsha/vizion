@@ -164,7 +164,7 @@
             margin-left: 0;
             margin-bottom: 10px;
             font-weight: 500;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 18px;
             &:hover {
               opacity: .85;
@@ -175,7 +175,7 @@
           display: list-item;
           list-style-type: square;
           margin-left: 13px;
-          font-size: 14px;
+          font-size: 16px;
           line-height: 170%;
           &:hover {
             color: $grey;
@@ -189,7 +189,7 @@
     >a{
       display: flex;
       align-items: center;
-      font-size: 12px;
+      font-size: 14px;
       line-height: 12px;
       color: $grey;
       svg{

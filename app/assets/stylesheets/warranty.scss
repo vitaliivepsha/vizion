@@ -20,6 +20,10 @@
   .section-consult {
     padding: 0;
   }
+
+  .col-lg-6:nth-child(1) p {
+    font-size: 16px;
+  }
 }
 
 .page-warranty__inner {

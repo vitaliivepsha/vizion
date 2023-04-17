@@ -1,12 +1,14 @@
 .catalog-page {
   padding-bottom: 30px;
-  +.section-reviews {
+
+  + .section-reviews {
     padding-top: 0;
     padding-bottom: 110px;
     @include bp(xs) {
       padding-bottom: 34px;
     }
   }
+
   @include bp(xs) {
     padding-bottom: 25px;
   }
@@ -34,6 +36,7 @@
   @include bp(xs) {
     padding-left: 22px;
   }
+
   &:before {
     content: "";
     position: absolute;
@@ -789,18 +792,22 @@
   line-height: 120%;
   color: $main;
   text-decoration: none !important;
+
   &:hover {
     color: $red;
   }
+
   svg {
     margin-left: 4px;
   }
+
   &.clear-all {
     margin-left: 12px;
     color: $red;
     @include bp(xs) {
       margin-left: 0;
     }
+
     svg {
       margin-left: 6px;
     }
@@ -832,7 +839,8 @@
         @include bp(xxs) {
           font-size: 12px;
         }
-        svg{
+
+        svg {
           @include bp(xxs) {
             width: 12px;
             height: 12px;
@@ -1183,6 +1191,7 @@
 .product-card__bot-btn-cart {
   background-color: $red;
   border-color: $red;
+
   &:hover {
     background-color: $main;
     border-color: $main;
@@ -1885,12 +1894,15 @@
   bottom: 0;
   top: 0;
   width: 300px;
-  right: -300px;
+  right: -100%;
   transition: linear .3s;
   position: fixed;
   z-index: 1100;
   background: #F2F2F2;
   //box-shadow: 0 0 20px rgba(56, 56, 56, 0.2);
+  @media (max-width: 390px) {
+    width: calc(100% - 20px);
+  }
 
   &.active {
     right: 0;
@@ -1902,7 +1914,7 @@
     }
   }
 
-  .catalog-filer__block{
+  .catalog-filer__block {
     margin-bottom: 10px;
   }
 }
@@ -1912,7 +1924,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 40px;
+  height: 45px;
   padding: 15px;
   color: #fff;
   background-color: $main;
@@ -1922,8 +1934,8 @@
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 13px;
+  font-size: 16px;
+  line-height: 16px;
   cursor: pointer;
   transition: linear 0.2s;
 
@@ -1934,7 +1946,7 @@
 
   svg {
     margin-right: 10px;
-    margin-top: -2px;
+
   }
 }
 
@@ -1975,6 +1987,11 @@
   justify-content: space-between;
   overflow: auto;
   height: 100%;
+
+  .catalog-filters {
+    padding: 14px 20px 13px 15px;
+    min-height: 45px;
+  }
 }
 
 // ii
@@ -2019,51 +2036,59 @@
   height: calc(100vh - 50px);
   overflow: auto;
   padding: 18px 17px 30px;
-  >div{
+
+  > div {
     position: static;
     width: auto;
     height: auto;
     display: block;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 15px;
     margin-bottom: 10px;
     transform: none;
   }
-  .show-all{
+
+  .show-all {
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 28px;
     text-decoration: underline;
     color: $red;
     margin-left: 20px;
     margin-bottom: 12px;
     padding-left: 0;
-    &:hover, &:focus{
+
+    &:hover, &:focus {
       text-decoration: none;
     }
   }
-  ul{
-    li{
+
+  ul {
+    li {
       position: relative;
-      margin-bottom: 14px;
-      a{
+      margin-bottom: 18px;
+
+      a {
         display: block;
         padding-left: 20px;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 16px;
         text-decoration: none;
         color: $main;
-        &:hover{
+
+        &:hover {
           color: $grey;
           text-decoration: none;
         }
-        &:focus{
+
+        &:focus {
           color: $grey;
           text-decoration: none;
         }
       }
-      span{
+
+      span {
         position: absolute;
         left: 0;
         top: 1px;
@@ -2074,7 +2099,9 @@
         align-items: center;
         justify-content: center;
         transition: linear .2s;
-        &:after{
+        cursor: pointer;
+
+        &:after {
           position: absolute;
           z-index: 1;
           content: '';
@@ -2084,7 +2111,8 @@
           width: calc(100% + 10px);
           height: calc(100% + 10px);
         }
-        >svg{
+
+        > svg {
           width: 9px;
           height: 9px;
         }
@@ -2093,33 +2121,41 @@
   }
 }
 
-.catalog-mob__filters{
-  .lvl2, .lvl3, .lvl4{
-    &:not(.has-children){
+.catalog-mob__filters {
+  .lvl2, .lvl3, .lvl4 {
+    &:not(.has-children) {
       display: none;
       position: fixed;
       bottom: 0;
       top: 0;
       width: 300px;
-      right: -300px;
+      right: -100%;
       transition: linear 0.3s;
       background-color: #F2F2F2;
-      &.active{
+      @media (max-width: 390px) {
+        width: calc(100% - 20px);
+      }
+
+      &.active {
         display: block;
         right: 0;
       }
     }
-    &.active.has-children{
+
+    &.active.has-children {
       position: static;
     }
   }
-  .lvl2{
+
+  .lvl2 {
     z-index: 1101;
   }
-  .lvl3{
+
+  .lvl3 {
     z-index: 1102;
   }
-  .lvl4{
+
+  .lvl4 {
     z-index: 1103;
   }
 }

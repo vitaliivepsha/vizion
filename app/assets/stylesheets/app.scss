@@ -20,46 +20,56 @@ body {
   @include bp(md) {
     display: block;
   }
+
   &.fixed-header {
     .overlay {
       top: 50px;
     }
+
     .cat-menu {
       max-height: calc(100vh - 80px);
     }
+
     .main-submenu {
       > div {
         top: 83px;
       }
     }
   }
-  &.show-tel{
+
+  &.show-tel {
     overflow: hidden;
-    .header-mob__phone.show-phone{
-      svg path{
+
+    .header-mob__phone.show-phone {
+      svg path {
         fill: $red;
       }
     }
-    .header-mob__phones{
-      ul{
+
+    .header-mob__phones {
+      ul {
         opacity: 1;
         visibility: visible;
       }
     }
+
     .overlay {
       visibility: visible;
       opacity: 1;
       z-index: 997;
     }
   }
+
   &.open-mobile-menu {
     overflow: hidden;
   }
-  &.mm-lvl2{
-    .mobile-menu__search{
+
+  &.mm-lvl2 {
+    .mobile-menu__search {
       z-index: 1;
     }
   }
+
   &.open-menu {
     .overlay {
       visibility: visible;
@@ -67,23 +77,31 @@ body {
       z-index: 997;
     }
   }
+
   &.sumoStopScroll {
     overflow: unset;
   }
+
   &.open-search-results {
     .overlay {
       visibility: visible;
       opacity: 1;
       z-index: 997;
     }
+
     .mobile-menu {
-      &:before{
+      &:before {
         opacity: 1;
         visibility: visible;
       }
     }
   }
+
   &.filters-opened {
+    @media (max-width: 390px) {
+      overflow: hidden;
+    }
+
     .overlay {
       top: 0;
       z-index: 1001;
@@ -94,42 +112,51 @@ body {
       transition: opacity linear .3s, visibility .3s;
     }
   }
-  @media (min-height: 700px){
-    &.mfp-open{
-      &.fixed-header{
-        .mfp-bg, .mfp-wrap{
+
+  @media (min-height: 700px) {
+    &.mfp-open {
+      &.fixed-header {
+        .mfp-bg, .mfp-wrap {
           top: 49px;
         }
       }
-      .mfp-bg, .mfp-wrap{
+
+      .mfp-bg, .mfp-wrap {
         top: 119px;
       }
+
       .mfp-content {
         vertical-align: top;
         margin: 80px auto 0;
       }
-      .header{
+
+      .header {
         z-index: 1046;
       }
+
       .overlay {
         z-index: 1045;
       }
     }
-    &.swal2-shown{
-      &.fixed-header{
-        .swal2-container{
+    &.swal2-shown {
+      &.fixed-header {
+        .swal2-container {
           top: 49px;
         }
       }
-      .swal2-container{
+
+      .swal2-container {
         top: 119px;
       }
-      .swal2-modal{
+
+      .swal2-modal {
         margin-top: 80px !important;
       }
-      .header{
+
+      .header {
         z-index: 1062;
       }
+
       .overlay {
         z-index: 1061;
       }
@@ -246,27 +273,33 @@ main {
     font-size: 14px;
     line-height: 13px;
   }
+
   &:focus,
   &:hover {
     outline: none !important;
     box-shadow: none;
   }
-  &:hover{
+
+  &:hover {
     background: $red;
     color: #fff;
   }
+
   &.btn-r {
     background-color: $red;
     color: #fff;
+
     &:hover {
       background-color: $main;
       color: #fff;
     }
   }
+
   &.btn-tr {
     border: 1px solid $main;
     background-color: transparent;
     color: $main;
+
     &:hover {
       background-color: $main;
       color: #fff;
@@ -309,6 +342,7 @@ main {
       }
     }
   }
+
   .validate-error {
     color: $red;
     font-size: 12px;
@@ -320,10 +354,11 @@ main {
     z-index: 2;
     pointer-events: none;
     font-family: $default;
+    background-color: #fff;
   }
 }
 
-.input{
+.input {
   background-color: #fff;
   width: 100%;
   height: 40px;
@@ -338,9 +373,18 @@ main {
   color: $main;
   -webkit-appearance: none;
   appearance: none;
+  @supports (-webkit-touch-callout: none) {
+    font-size: 16px;
+  }
+
+  &:focus {
+    @supports (-webkit-touch-callout: none) {
+      font-size: 16px;
+    }
+  }
 }
 
-.textarea{
+.textarea {
   display: block;
   background-color: #fff;
   width: 100%;
@@ -359,6 +403,16 @@ main {
   appearance: none;
   overflow: hidden;
   overflow-y: auto;
+  @supports (-webkit-touch-callout: none) {
+    font-size: 16px;
+  }
+
+  &:focus {
+    @supports (-webkit-touch-callout: none) {
+      font-size: 16px;
+    }
+  }
+
   &::-webkit-scrollbar {
     overflow-y: scroll;
     background: transparent;
@@ -366,6 +420,7 @@ main {
     transition: linear .2s;
     box-shadow: 1px 0 0 transparent;
   }
+
   &::-webkit-scrollbar-thumb {
     background: $main;
     border-radius: 0;

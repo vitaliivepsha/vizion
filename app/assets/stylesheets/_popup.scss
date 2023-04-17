@@ -1230,8 +1230,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include bp(sm) {
-      right: 0;
+    @include bp(lg) {
+      right: 10px;
       top: auto;
       bottom: calc(100% + 10px);
     }

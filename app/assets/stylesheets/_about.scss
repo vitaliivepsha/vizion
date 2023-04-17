@@ -3,7 +3,8 @@
   @include bp(xs) {
     padding-bottom: 70px;
   }
-  .page-title{
+
+  .page-title {
     @include bp(xs) {
       margin-bottom: 10px;
     }
@@ -22,16 +23,19 @@
     margin: 0;
     top: -31px;
   }
+
   .about-messengers {
-    a{
+    a {
       display: flex;
-      svg{
+
+      svg {
         @include bp(xs) {
           width: 15px;
           height: fit-content;
         }
       }
     }
+
     @include bp(xs) {
       gap: 20px;
     }
@@ -44,17 +48,35 @@
   align-items: center;
   gap: 31px;
   pointer-events: auto;
+
   &.about-messengers--social {
     gap: 7px;
+
+    a {
+      &:hover {
+        svg path {
+          &:nth-of-type(1) {
+            fill: $red-light;
+          }
+          &:nth-of-type(2) {
+            fill: #fff;
+          }
+        }
+      }
+    }
   }
+
   li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
     a {
       &:hover {
-        opacity: 0.7;
+        svg path {
+          fill: $red-light;
+        }
       }
     }
   }
@@ -76,6 +98,7 @@
     padding: 26px 15px 42px 20px;
     margin-bottom: 20px;
   }
+
   &:before {
     content: "";
     position: absolute;
@@ -89,6 +112,7 @@
       display: none;
     }
   }
+
   .wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -96,10 +120,12 @@
     @include bp(xs) {
       gap: 0;
     }
+
     ul, ol {
       max-width: 400px;
     }
   }
+
   h2, h3 {
     margin-top: 0;
     font-style: normal;
@@ -113,12 +139,14 @@
       font-size: 16px;
       margin-bottom: 25px;
     }
+
     strong {
       font-style: normal;
       font-weight: 400;
       color: #F25733;
     }
   }
+
   p {
     margin: 16px 0;
     font-weight: 400;
@@ -128,6 +156,7 @@
       font-size: 14px;
     }
   }
+
   a {
     font-weight: 400;
     font-size: 16px;
@@ -136,14 +165,17 @@
       font-size: 14px;
     }
   }
+
   ol {
     list-style: decimal;
     padding-left: 10px;
   }
+
   ul {
     list-style: disc;
     padding-left: 15px;
   }
+
   li {
     font-weight: 400;
     font-size: 16px;
@@ -152,8 +184,9 @@
       font-size: 14px;
     }
   }
-  *{
-    &:last-child{
+
+  * {
+    &:last-child {
       @include bp(xs) {
         margin-bottom: 0;
       }
@@ -188,7 +221,8 @@
   @include bp(xs) {
     margin-bottom: 20px;
   }
-  svg{
+
+  svg {
     max-width: 100%;
     height: fit-content;
   }
@@ -202,6 +236,7 @@
   @include bp(xs) {
     height: calc(115vw - 64px);
   }
+
   iframe {
     width: 100%;
     height: 100%;
@@ -249,11 +284,13 @@
   @include bp(sm) {
     width: 100%;
   }
+
   &:nth-of-type(2) {
     margin-top: 23px;
     @include bp(lg) {
       margin-top: 0;
     }
+
     .about-contacts__contacts-title {
       margin-bottom: 6px;
       @include bp(xs) {
@@ -261,15 +298,18 @@
       }
     }
   }
+
   &:nth-of-type(3) {
     margin-top: 37px;
     @include bp(lg) {
       margin-top: 0;
     }
+
     .about-contacts__contacts-title {
       margin-bottom: 9px;
     }
   }
+
   .about-contacts__contacts-title {
     display: block;
     margin-bottom: 12px;
@@ -279,6 +319,7 @@
     line-height: 15px;
     color: $blue;
   }
+
   span, a {
     display: flex;
     font-style: normal;
@@ -289,18 +330,21 @@
       font-size: 14px;
     }
   }
+
   a {
     &:hover {
       color: $red;
     }
   }
+
   .about-messengers {
     margin-top: 8px;
     @include bp(xs) {
       gap: 30px;
       margin-top: 17px;
     }
-    &--social{
+
+    &--social {
       @include bp(xs) {
         gap: 7px;
         margin-top: 9px;
@@ -321,6 +365,7 @@
   @include bp(xs) {
     padding: 37px 18px 35px;
   }
+
   form {
     @include bp(lg) {
       margin: 0 auto;
@@ -371,6 +416,7 @@
   @include bp(sm) {
     width: 100%;
   }
+
   &:nth-child(1) {
     width: 100%;
     max-width: 312px;
@@ -382,6 +428,7 @@
       width: 100%;
     }
   }
+
   &:nth-child(2) {
     @include bp(md) {
       width: 50%;
@@ -390,6 +437,7 @@
       width: 100%;
     }
   }
+
   .input, .textarea {
     background: #FFFFFF;
     border: 1px solid #CDCDCD;
@@ -404,6 +452,7 @@
       margin-top: 11px;
     }
   }
+
   label {
     font-style: normal;
     font-weight: 400;
@@ -415,6 +464,7 @@
       margin-bottom: 3px;
     }
   }
+
   .textarea {
     height: 107px !important;
     @include bp(xs) {
@@ -426,6 +476,7 @@
 .about-contacts__form-bot {
   display: flex;
   justify-content: end;
+
   .btn {
     max-width: 351px;
     @include bp(md) {

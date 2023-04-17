@@ -97,7 +97,7 @@ $(function() {
     }, 100);
   });
 
-  $('.popup-btn:not(.product-video, .catalog-filter__video-btn)').magnificPopup({
+  $('.popup-btn:not(.product-video, .catalog-filter__video-btn, .video-gallery__item)').magnificPopup({
     callbacks: {
       open: function() {
         $('.mfp-wrap').css('overflow', 'initial').removeAttr('tabindex');
@@ -406,6 +406,7 @@ $(function() {
     $(this).closest('.header-search__wrapper').removeClass('focus').removeClass('active');
     $('.header-search > .search-results').hide();
     $('body').removeClass('open-search-results');
+      $(this).css('display', 'none');
   });
 
   $('.header-search input[type="search"]').on('keyup', function(e) {

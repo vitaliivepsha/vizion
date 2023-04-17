@@ -3,6 +3,11 @@
   @include bp(xs) {
     padding: 25px 0;
   }
+  .section-more {
+      @include bp(xs) {
+        margin-top: 5px;
+      }
+  }
 }
 
 .blog-head{

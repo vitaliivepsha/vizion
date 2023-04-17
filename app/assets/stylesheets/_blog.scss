@@ -99,6 +99,7 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
   border-radius: 3px;
   position: relative;
+  margin-bottom: 0;
   @include bp(sm) {
     width: 50%;
   }
@@ -114,6 +115,15 @@
     height: 100%;
     border-radius: 3px;
     font-size: 14px;
+    background-color: #fff;
+    @supports (-webkit-touch-callout: none) {
+      font-size: 16px;
+    }
+    &:focus {
+      @supports (-webkit-touch-callout: none) {
+        font-size: 16px;
+      }
+    }
     @include bp(xs) {
       padding-left: 33px;
       padding-right: 15px;
