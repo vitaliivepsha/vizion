@@ -20,6 +20,14 @@
       transform: none;
     }
   }
+  &-home{
+    .cat-menu__col{
+      width: 33.3%;
+      a{
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 .header-top {
